@@ -20,7 +20,6 @@
 		A82FB86428560D8A0044A5D6 /* Emergency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82FB86328560D8A0044A5D6 /* Emergency.storyboard */; };
 		A82FB866285639E50044A5D6 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB865285639E50044A5D6 /* EmergencySingleton.swift */; };
 		A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB86A28563E890044A5D6 /* DismissViewController.swift */; };
-		A867E00D28585929001F1BB6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A82FB82D2855E2240044A5D6 /* Info.plist */; };
 		A867E00F28585BC5001F1BB6 /* siren_test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867E00E28585BC5001F1BB6 /* siren_test.mp3 */; };
 		A867E01E28585BF6001F1BB6 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A867E01028585BF6001F1BB6 /* PlusJakartaSans-SemiBold.ttf */; };
 		A867E01F28585BF6001F1BB6 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A867E01128585BF6001F1BB6 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
@@ -274,7 +273,6 @@
 				A82FB8242855E2230044A5D6 /* Main.storyboard in Resources */,
 				A867E02328585BF6001F1BB6 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
 				A82FB86428560D8A0044A5D6 /* Emergency.storyboard in Resources */,
-				A867E00D28585929001F1BB6 /* Info.plist in Resources */,
 				A867E02828585BF6001F1BB6 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
 				A867E02128585BF6001F1BB6 /* PlusJakartaSans-Italic.ttf in Resources */,
 			);
