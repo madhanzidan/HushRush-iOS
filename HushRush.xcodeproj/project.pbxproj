@@ -31,6 +31,9 @@
 		A82FB85A2855E98F0044A5D6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82FB8592855E98F0044A5D6 /* Profile.storyboard */; };
 		A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB86128560D780044A5D6 /* EmergencyViewController.swift */; };
 		A82FB86428560D8A0044A5D6 /* Emergency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82FB86328560D8A0044A5D6 /* Emergency.storyboard */; };
+		A82FB866285639E50044A5D6 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB865285639E50044A5D6 /* EmergencySingleton.swift */; };
+		A82FB86928563B2F0044A5D6 /* siren_test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A82FB86828563B2F0044A5D6 /* siren_test.mp3 */; };
+		A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB86A28563E890044A5D6 /* DismissViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		A82FB8592855E98F0044A5D6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A82FB86128560D780044A5D6 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		A82FB86328560D8A0044A5D6 /* Emergency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Emergency.storyboard; sourceTree = "<group>"; };
+		A82FB865285639E50044A5D6 /* EmergencySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencySingleton.swift; sourceTree = "<group>"; };
+		A82FB86828563B2F0044A5D6 /* siren_test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = siren_test.mp3; path = ../../../../HushRushTest/HushRushTest/Resources/siren_test.mp3; sourceTree = "<group>"; };
+		A82FB86A28563E890044A5D6 /* DismissViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		A82FB8332855E5AE0044A5D6 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				A82FB86728563AFD0044A5D6 /* Sound */,
 				A82FB8342855E5B90044A5D6 /* Fonts */,
 			);
 			name = Themes;
@@ -136,6 +143,7 @@
 		A82FB8522855E88C0044A5D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A82FB865285639E50044A5D6 /* EmergencySingleton.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -172,9 +180,18 @@
 			isa = PBXGroup;
 			children = (
 				A82FB86128560D780044A5D6 /* EmergencyViewController.swift */,
+				A82FB86A28563E890044A5D6 /* DismissViewController.swift */,
 				A82FB86328560D8A0044A5D6 /* Emergency.storyboard */,
 			);
 			path = Emergency;
+			sourceTree = "<group>";
+		};
+		A82FB86728563AFD0044A5D6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				A82FB86828563B2F0044A5D6 /* siren_test.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82FB86928563B2F0044A5D6 /* siren_test.mp3 in Resources */,
 				A82FB8452855E5D40044A5D6 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
 				A82FB82C2855E2240044A5D6 /* LaunchScreen.storyboard in Resources */,
 				A82FB8472855E5D40044A5D6 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
@@ -264,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
+				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				A82FB866285639E50044A5D6 /* EmergencySingleton.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
 				A82FB8582855E97E0044A5D6 /* ProfileViewController.swift in Sources */,
