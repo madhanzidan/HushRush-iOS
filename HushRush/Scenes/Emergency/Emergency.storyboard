@@ -44,8 +44,8 @@ Activated</string>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-Ff-0L0">
-                                <rect key="frame" x="50" y="597" width="290" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-Ff-0L0">
+                                <rect key="frame" x="50" y="594" width="290" height="68.333333333333371"/>
                                 <string key="text">The alarm has been activated. Your contacts &amp; surroundings
 have been alerted.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
@@ -56,7 +56,7 @@ have been alerted.</string>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Red"/>
                         <constraints>
-                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="13.333333333333371" id="03G-7S-05Q"/>
+                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="25" id="03G-7S-05Q"/>
                             <constraint firstItem="8ew-Ff-0L0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="0M3-tK-U1f"/>
                             <constraint firstItem="uwb-uw-E1L" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="8MW-YM-ddT"/>
                             <constraint firstItem="uwb-uw-E1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="MfD-5e-5Cx"/>

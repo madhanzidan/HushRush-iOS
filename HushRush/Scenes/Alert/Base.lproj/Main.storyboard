@@ -24,32 +24,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press button below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UV-EF-Fn1">
-                                <rect key="frame" x="103" y="199" width="183" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan tombol di bawah" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UV-EF-Fn1">
+                                <rect key="frame" x="20" y="234" width="350" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
                                 <color key="textColor" red="0.0039215686274509803" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeling unsafe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-5p-b7L">
-                                <rect key="frame" x="66" y="126" width="258" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merasa tidak aman?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-5p-b7L">
+                                <rect key="frame" x="20" y="186" width="350" height="43"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" red="0.89803921568627454" green="0.29019607843137252" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-eZ-JYU">
-                                <rect key="frame" x="16" y="276" width="358" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-eZ-JYU">
+                                <rect key="frame" x="20" y="304.33333333333331" width="350" height="304.99999999999994"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="Kts-Tt-GUd"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Emergency Button Transparent-1"/>
                                 <connections>
                                     <segue destination="8Sr-2A-hHK" kind="presentation" id="hEC-hS-Wen"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The alert system will be activated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-B8-eR8">
-                                <rect key="frame" x="41" y="663" width="308" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sistem peringatan akan diaktifkan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-B8-eR8">
+                                <rect key="frame" x="20" y="695.66666666666663" width="350" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
                                 <color key="textColor" red="0.0039215686269999999" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,6 +56,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="2Uc-B8-eR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CW6-Hk-w1y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qAC-eZ-JYU" secondAttribute="trailing" constant="20" id="EFz-Ej-baf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Uc-B8-eR8" secondAttribute="bottom" constant="40" id="Jgb-pX-t4R"/>
+                            <constraint firstItem="qAC-eZ-JYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jii-cq-TiK"/>
+                            <constraint firstItem="BGU-5p-b7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kd9-5y-gwl"/>
+                            <constraint firstItem="3UV-EF-Fn1" firstAttribute="top" secondItem="BGU-5p-b7L" secondAttribute="bottom" constant="5" id="Tgp-cm-Fb2"/>
+                            <constraint firstItem="BGU-5p-b7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="186" id="XF0-Bo-E5N"/>
+                            <constraint firstItem="3UV-EF-Fn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eZt-jV-fOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGU-5p-b7L" secondAttribute="trailing" constant="20" id="iP6-z9-Mqo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Uc-B8-eR8" secondAttribute="trailing" constant="20" id="muA-Qx-ENI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3UV-EF-Fn1" secondAttribute="trailing" constant="20" id="oCz-ab-V9g"/>
+                            <constraint firstItem="qAC-eZ-JYU" firstAttribute="top" secondItem="3UV-EF-Fn1" secondAttribute="bottom" constant="45" id="uZD-ut-qVf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alert" image="bell.fill" catalog="system" id="AMH-9K-wnC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -73,29 +86,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activating  Alert System" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNj-tJ-F28">
-                                <rect key="frame" x="89" y="321" width="213" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNj-tJ-F28">
+                                <rect key="frame" x="20" y="327" width="350" height="75.666666666666686"/>
+                                <string key="text">Mengaktifkan
+Sistem Peringatan</string>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3X-jb-5vj">
-                                <rect key="frame" x="106" y="472" width="196" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Sounding the alarm
-Turning on flashlight
-Recording video
-Sending alert to your emergency contacts</string>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-cS-NOP">
-                                <rect key="frame" x="107" y="640" width="196" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-cS-NOP">
+                                <rect key="frame" x="97" y="718" width="196" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="2QZ-AH-xPG"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cancel Alert" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="filled" title="Batalkan" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
                                     <color key="baseForegroundColor" name="DarkBlue"/>
                                     <color key="baseBackgroundColor" name="White"/>
@@ -104,16 +109,41 @@ Sending alert to your emergency contacts</string>
                                     <action selector="cancelAlert:" destination="8Sr-2A-hHK" eventType="touchUpInside" id="AYo-m6-yvs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-BV-ggV">
-                                <rect key="frame" x="16" y="146" width="358" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-BV-ggV">
+                                <rect key="frame" x="20" y="128" width="350" height="189"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="150"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3X-jb-5vj">
+                                <rect key="frame" x="94" y="546.66666666666663" width="202" height="126.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="xIX-HN-EOk"/>
+                                </constraints>
+                                <string key="text">Membunyikan alarm
+Menyalakan senter
+Merekam video
+Mengirim peringatan ke kontak darurat</string>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iog-9C-XuO"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.29019607843137252" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="fNj-tJ-F28" secondAttribute="trailing" constant="20" id="1nk-Bm-gKB"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="bottom" secondItem="ntd-cS-NOP" secondAttribute="bottom" constant="40" id="3AS-bG-foA"/>
+                            <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="H3X-jb-5vj" secondAttribute="bottom" constant="45" id="8FB-GF-T5k"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="MSh-BV-ggV" secondAttribute="trailing" constant="20" id="DCk-Uf-K1s"/>
+                            <constraint firstItem="ntd-cS-NOP" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="97" id="GXs-gW-rtN"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="ntd-cS-NOP" secondAttribute="trailing" constant="97" id="MQq-dc-ian"/>
+                            <constraint firstItem="MSh-BV-ggV" firstAttribute="top" secondItem="DWG-Db-3VV" secondAttribute="top" constant="128" id="Pfh-zm-Ed0"/>
+                            <constraint firstItem="fNj-tJ-F28" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="SI4-0z-11J"/>
+                            <constraint firstItem="MSh-BV-ggV" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="WVf-b6-BMF"/>
+                            <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="qfQ-3F-Oic"/>
+                            <constraint firstItem="H3X-jb-5vj" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="94" id="v2n-d5-w7e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
                     <connections>

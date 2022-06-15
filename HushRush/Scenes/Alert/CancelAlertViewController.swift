@@ -11,10 +11,13 @@ class CancelAlertViewController: UIViewController {
 
     @IBOutlet weak var CountdownLabel: UILabel!
     
+    var cancelTimer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var counter = 3
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        cancelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
             timer in
             print("Timer fired")
             self.CountdownLabel.text = "\(counter)"
@@ -35,26 +38,8 @@ class CancelAlertViewController: UIViewController {
     
     @IBAction func cancelAlert(_ sender: UIButton) {
         dismiss(animated: true)
+        cancelTimer.invalidate()
     }
-    
-//    @objc func triggerCountdown() {
-//        for i in (0 ..< (3 + 1)).reversed() {
-//            self.CountdownLabel.text = "\(i)"
-//        }
-//    }
-//
-//    func decrementLabel(_ startValue: Int, _ endValue: Int) {
-//        let duration: Double = 2.0
-//        DispatchQueue.global().async {
-//            for i in (0 ..< (endValue + 1)).reversed() {
-//                let sleepTime = UInt32(duration / Double(endValue) * 1000000.0)
-//                usleep(sleepTime)
-//                DispatchQueue.main.async {
-//                    self.CountdownLabel.text = "\(i)"
-//                }
-//            }
-//        }
-//    }
     
     func setGradientBackground() {
         let colorTop =  UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.40).cgColor
