@@ -10,7 +10,7 @@ import UIKit
 class CancelAlertViewController: UIViewController {
 
     @IBOutlet weak var CountdownLabel: UILabel!
-    
+    @IBOutlet weak var cancelButton: UIButton!
     var cancelTimer = Timer()
     
     override func viewDidLoad() {
@@ -34,6 +34,7 @@ class CancelAlertViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
+        setButtonShadow(button: cancelButton)
     }
     
     @IBAction func cancelAlert(_ sender: UIButton) {
@@ -52,6 +53,14 @@ class CancelAlertViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
+    }
+    
+    func setButtonShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = .zero
+        button.layer.shadowOpacity = 0.4
+        button.layer.shadowRadius = 10.0
+        button.layer.masksToBounds = false
     }
 }
 

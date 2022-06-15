@@ -148,6 +148,7 @@ Mengirim peringatan ke kontak darurat</string>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
                     <connections>
                         <outlet property="CountdownLabel" destination="MSh-BV-ggV" id="jIy-54-fpT"/>
+                        <outlet property="cancelButton" destination="ntd-cS-NOP" id="vHO-Zd-7Xh"/>
                         <segue destination="1DY-bV-67w" kind="presentation" identifier="goToEmergency" modalPresentationStyle="fullScreen" id="zsp-eX-aPB"/>
                     </connections>
                 </viewController>
