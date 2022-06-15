@@ -119,10 +119,21 @@ This page will automatically close.</string>
                             <constraint firstItem="cJn-fM-pcc" firstAttribute="top" secondItem="Yqg-BF-maV" secondAttribute="bottom" constant="53" id="yco-FY-1zF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ET4-Qe-577" kind="presentation" identifier="goToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rmJ-JR-3La"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8K-59-e82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134" y="58"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="7Ja-8S-Pm9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="ET4-Qe-577" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICS-LZ-t7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="101"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,7 @@ class CancelAlertViewController: UIViewController {
                 self.CountdownLabel.font = self.CountdownLabel.font.withSize(50)
                 self.CountdownLabel.text = "Success"
                 timer.invalidate()
+                self.performSegue(withIdentifier: "goToEmergency", sender: self)
             }
         }
     }
@@ -33,6 +34,7 @@ class CancelAlertViewController: UIViewController {
     }
     
     @IBAction func cancelAlert(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 //    @objc func triggerCountdown() {

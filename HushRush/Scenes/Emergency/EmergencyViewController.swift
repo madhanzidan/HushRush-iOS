@@ -18,8 +18,8 @@ class EmergencyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        EmergencySingleton.sharedInstance.playSound()
         
+        EmergencySingleton.sharedInstance.playSound()
         let audioSession = AVAudioSession.sharedInstance()
         
         do{

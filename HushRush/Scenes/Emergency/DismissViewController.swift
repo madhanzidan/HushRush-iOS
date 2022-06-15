@@ -8,10 +8,18 @@
 import UIKit
 
 class DismissViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var counter = 3
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+            timer in
+            counter -= 1
+            if counter < 0 {
+                timer.invalidate()
+                self.performSegue(withIdentifier: "goToTabBar", sender: self)
+            }
+        }
         
     }
     

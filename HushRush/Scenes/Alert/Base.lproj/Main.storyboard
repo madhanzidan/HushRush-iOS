@@ -3,8 +3,8 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Alert View Controller-->
+        <!--Alert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="AlertViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,8 +56,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Alert" image="bell.fill" catalog="system" id="AMH-9K-wnC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,23 +118,30 @@ Sending alert to your emergency contacts</string>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
                     <connections>
                         <outlet property="CountdownLabel" destination="MSh-BV-ggV" id="jIy-54-fpT"/>
+                        <segue destination="1DY-bV-67w" kind="presentation" identifier="goToEmergency" modalPresentationStyle="fullScreen" id="zsp-eX-aPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4is-AM-Y6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041.5384615384614" y="84.597156398104261"/>
         </scene>
+        <!--Emergency-->
+        <scene sceneID="rDP-Ri-OCc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Emergency" id="1DY-bV-67w" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-l8-Aqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="114"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Emergency Button Transparent-1" width="385" height="385"/>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
         <namedColor name="DarkBlue">
             <color red="0.0040000001899898052" green="0.10999999940395355" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="0.9570000171661377" green="0.9570000171661377" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
