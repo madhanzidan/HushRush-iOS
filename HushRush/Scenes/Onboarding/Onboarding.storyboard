@@ -116,8 +116,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <outlet property="birthDateField" destination="6W6-rZ-4Yl" id="yqZ-dd-NU3"/>
                         <outlet property="deafPickerField" destination="AZZ-nZ-OwJ" id="vp5-bX-5Vy"/>
                         <outlet property="nameField" destination="AYg-U0-K4p" id="dCf-Mf-ROY"/>
-                        <outlet property="saveButton" destination="q2G-5B-GBY" id="sob-fZ-YEX"/>
-                        <outlet property="skipButton" destination="q2G-5B-GBY" id="DmX-98-zBN"/>
+                        <outlet property="saveButton" destination="L4X-Tg-u8u" id="Q56-OF-9Wt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
