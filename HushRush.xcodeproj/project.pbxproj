@@ -38,7 +38,36 @@
 		A83054DA285981AD005574E5 /* siren_test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A83054D9285981AD005574E5 /* siren_test.mp3 */; };
 		A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83054DC285985EB005574E5 /* TabBarViewController.swift */; };
 		A83054DF285985F8005574E5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83054DE285985F8005574E5 /* TabBar.storyboard */; };
+		A8FB654F285E1C5300AB4028 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB654E285E1C5300AB4028 /* WidgetKit.framework */; };
+		A8FB6551285E1C5300AB4028 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB6550285E1C5300AB4028 /* SwiftUI.framework */; };
+		A8FB6554285E1C5300AB4028 /* EmergencyButtonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */; };
+		A8FB6556285E1C5300AB4028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB6555285E1C5300AB4028 /* Assets.xcassets */; };
+		A8FB655B285E1C5400AB4028 /* EmergencyButtonWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8FB6558285E1C5300AB4028 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A82FB8112855E2230044A5D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8FB654B285E1C5300AB4028;
+			remoteInfo = EmergencyButtonWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8FB655A285E1C5400AB4028 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A8FB655B285E1C5400AB4028 /* EmergencyButtonWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
@@ -74,6 +103,12 @@
 		A83054D9285981AD005574E5 /* siren_test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren_test.mp3; sourceTree = "<group>"; };
 		A83054DC285985EB005574E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A83054DE285985F8005574E5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmergencyButtonWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FB654E285E1C5300AB4028 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A8FB6550285E1C5300AB4028 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonWidget.swift; sourceTree = "<group>"; };
+		A8FB6555285E1C5300AB4028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8FB6557285E1C5300AB4028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +119,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8FB6549285E1C5300AB4028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8FB6551285E1C5300AB4028 /* SwiftUI.framework in Frameworks */,
+				A8FB654F285E1C5300AB4028 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				A82FB81B2855E2230044A5D6 /* HushRush */,
+				A8FB6552285E1C5300AB4028 /* EmergencyButtonWidget */,
+				A8FB654D285E1C5300AB4028 /* Frameworks */,
 				A82FB81A2855E2230044A5D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A82FB8192855E2230044A5D6 /* HushRush.app */,
+				A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +261,25 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		A8FB654D285E1C5300AB4028 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8FB654E285E1C5300AB4028 /* WidgetKit.framework */,
+				A8FB6550285E1C5300AB4028 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8FB6552285E1C5300AB4028 /* EmergencyButtonWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */,
+				A8FB6555285E1C5300AB4028 /* Assets.xcassets */,
+				A8FB6557285E1C5300AB4028 /* Info.plist */,
+			);
+			path = EmergencyButtonWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,15 +290,34 @@
 				A82FB8152855E2230044A5D6 /* Sources */,
 				A82FB8162855E2230044A5D6 /* Frameworks */,
 				A82FB8172855E2230044A5D6 /* Resources */,
+				A8FB655A285E1C5400AB4028 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8FB6559285E1C5300AB4028 /* PBXTargetDependency */,
 			);
 			name = HushRush;
 			productName = HushRush;
 			productReference = A82FB8192855E2230044A5D6 /* HushRush.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A8FB654B285E1C5300AB4028 /* EmergencyButtonWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8FB655E285E1C5400AB4028 /* Build configuration list for PBXNativeTarget "EmergencyButtonWidgetExtension" */;
+			buildPhases = (
+				A8FB6548285E1C5300AB4028 /* Sources */,
+				A8FB6549285E1C5300AB4028 /* Frameworks */,
+				A8FB654A285E1C5300AB4028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmergencyButtonWidgetExtension;
+			productName = EmergencyButtonWidgetExtension;
+			productReference = A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -241,11 +326,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					A82FB8182855E2230044A5D6 = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					A8FB654B285E1C5300AB4028 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -263,6 +351,7 @@
 			projectRoot = "";
 			targets = (
 				A82FB8182855E2230044A5D6 /* HushRush */,
+				A8FB654B285E1C5300AB4028 /* EmergencyButtonWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +385,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8FB654A285E1C5300AB4028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8FB6556285E1C5300AB4028 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,7 +413,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8FB6548285E1C5300AB4028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8FB6554285E1C5300AB4028 /* EmergencyButtonWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8FB6559285E1C5300AB4028 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8FB654B285E1C5300AB4028 /* EmergencyButtonWidgetExtension */;
+			targetProxy = A8FB6558285E1C5300AB4028 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A82FB8222855E2230044A5D6 /* Main.storyboard */ = {
@@ -455,6 +568,7 @@
 		A82FB8312855E2240044A5D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +597,7 @@
 		A82FB8322855E2240044A5D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +623,62 @@
 			};
 			name = Release;
 		};
+		A8FB655C285E1C5400AB4028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NRD8HSMRZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyButtonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmergencyButtonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Six-Eleven.HushRush.EmergencyButtonWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8FB655D285E1C5400AB4028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NRD8HSMRZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmergencyButtonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmergencyButtonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Six-Eleven.HushRush.EmergencyButtonWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,6 +696,15 @@
 			buildConfigurations = (
 				A82FB8312855E2240044A5D6 /* Debug */,
 				A82FB8322855E2240044A5D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8FB655E285E1C5400AB4028 /* Build configuration list for PBXNativeTarget "EmergencyButtonWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8FB655C285E1C5400AB4028 /* Debug */,
+				A8FB655D285E1C5400AB4028 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
