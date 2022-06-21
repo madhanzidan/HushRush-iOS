@@ -227,10 +227,10 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Up Permission View Controller-->
         <scene sceneID="kOp-pI-b1x">
             <objects>
-                <viewController id="Mb9-Ab-ZGR" sceneMemberID="viewController">
+                <viewController id="Mb9-Ab-ZGR" customClass="SetUpPermissionViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ri-kP-BJY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +270,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                     <color key="baseBackgroundColor" name="Blue"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="didTapNext:" destination="Mb9-Ab-ZGR" eventType="touchUpInside" id="1cV-67-Hu6"/>
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SSs-rO-zCU"/>
                                 </connections>
                             </button>

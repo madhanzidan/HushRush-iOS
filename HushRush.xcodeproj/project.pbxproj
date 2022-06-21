@@ -12,6 +12,7 @@
 		934BFB9428603E8400F4BE59 /* SetUpProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934BFB9328603E8400F4BE59 /* SetUpProfile.swift */; };
 		934BFB9628603E9600F4BE59 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934BFB9528603E9600F4BE59 /* Onboarding.storyboard */; };
 		93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */; };
+		93E678FD28617D0500776E7F /* SetUpPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
 		A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB8202855E2230044A5D6 /* AlertViewController.swift */; };
@@ -49,6 +50,7 @@
 		934BFB9328603E8400F4BE59 /* SetUpProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfile.swift; sourceTree = "<group>"; };
 		934BFB9528603E9600F4BE59 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpEmergencyViewController.swift; sourceTree = "<group>"; };
+		93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpPermissionViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FB81C2855E2230044A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				934BFB9328603E8400F4BE59 /* SetUpProfile.swift */,
 				93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */,
+				93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */,
 				934BFB9528603E9600F4BE59 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
@@ -323,6 +326,7 @@
 			files = (
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				93E678FD28617D0500776E7F /* SetUpPermissionViewController.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
 				93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */,
