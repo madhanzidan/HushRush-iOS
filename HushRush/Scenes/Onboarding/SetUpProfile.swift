@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class OnboardingViewController: UIViewController {
+class SetUpProfile: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var birthDateField: UITextField!
@@ -24,18 +24,41 @@ class OnboardingViewController: UIViewController {
         
         hideKeyboardWhenTappedAround()
         
-        saveButton.addTarget(self, action: #selector(tapForSave), for: .touchUpInside)
+        //saveButton.addTarget(self, action: #selector(tapForSave), for: .touchUpInside)
         
         
         retrieveProfile()
         birthDatePicker()
         deafPicker()
+ 
     }
-    
+   /*
     @objc private func tapForSave() {
         UserDefaults.standard.set(nameField.text!, forKey: "NAME")
         UserDefaults.standard.set(birthDateField.text!, forKey: "DATE")
         UserDefaults.standard.set(deafPickerField.text!, forKey: "DEAF")
+        
+        //performSegue(withIdentifier: "goEmergencyContact", sender: self)
+        
+
+    }*/
+    
+    @IBAction func didTapSave(_ sender: UIButton) {
+        UserDefaults.standard.set(nameField.text!, forKey: "NAME")
+        UserDefaults.standard.set(birthDateField.text!, forKey: "DATE")
+        UserDefaults.standard.set(deafPickerField.text!, forKey: "DEAF")
+        
+        if nameField.text == "" {
+            print("Name Error")
+        } else if birthDateField.text == "" {
+            print("Birth Empty")
+        } else if deafPickerField.text == "" {
+            print("Deaf Empty")
+        } else {
+            performSegue(withIdentifier: "goEmergencyContact", sender: self)
+        }
+ 
+
         
     }
     
@@ -78,9 +101,11 @@ class OnboardingViewController: UIViewController {
         deafPickerField.inputView = deafPickerView
         
     }
+    
+
 }
 
-extension OnboardingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension SetUpProfile: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -102,9 +127,9 @@ extension OnboardingViewController: UIPickerViewDelegate, UIPickerViewDataSource
     
 }
 
-extension OnboardingViewController {
+extension SetUpProfile {
     func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(OnboardingViewController.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SetUpProfile.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

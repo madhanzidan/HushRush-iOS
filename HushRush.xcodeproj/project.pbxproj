@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
-		934BFB9428603E8400F4BE59 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934BFB9328603E8400F4BE59 /* OnboardingViewController.swift */; };
+		934BFB9428603E8400F4BE59 /* SetUpProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934BFB9328603E8400F4BE59 /* SetUpProfile.swift */; };
 		934BFB9628603E9600F4BE59 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934BFB9528603E9600F4BE59 /* Onboarding.storyboard */; };
+		93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
 		A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB8202855E2230044A5D6 /* AlertViewController.swift */; };
@@ -45,8 +46,9 @@
 /* Begin PBXFileReference section */
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
-		934BFB9328603E8400F4BE59 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		934BFB9328603E8400F4BE59 /* SetUpProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfile.swift; sourceTree = "<group>"; };
 		934BFB9528603E9600F4BE59 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpEmergencyViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FB81C2855E2230044A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +96,8 @@
 		934BFB9228603E5B00F4BE59 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				934BFB9328603E8400F4BE59 /* OnboardingViewController.swift */,
+				934BFB9328603E8400F4BE59 /* SetUpProfile.swift */,
+				93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */,
 				934BFB9528603E9600F4BE59 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
@@ -322,12 +325,13 @@
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
+				93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */,
 				A82FB8582855E97E0044A5D6 /* ProfileViewController.swift in Sources */,
 				A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */,
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
 				A82FB8272855E2230044A5D6 /* HushRush.xcdatamodeld in Sources */,
 				A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */,
-				934BFB9428603E8400F4BE59 /* OnboardingViewController.swift in Sources */,
+				934BFB9428603E8400F4BE59 /* SetUpProfile.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

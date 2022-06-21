@@ -12,15 +12,18 @@
         <array key="PlusJakartaSans-Bold.ttf">
             <string>PlusJakartaSans-Bold</string>
         </array>
+        <array key="PlusJakartaSans-Medium.ttf">
+            <string>PlusJakartaSans-Medium</string>
+        </array>
         <array key="PlusJakartaSans-Regular.ttf">
             <string>PlusJakartaSans-Regular</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Onboarding View Controller-->
+        <!--Set Up Profile-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SetUpProfile" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +37,9 @@
                                     <color key="baseForegroundColor" name="White"/>
                                     <color key="baseBackgroundColor" name="Blue"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7sc-ji-3aO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-nZ-OwJ" userLabel="Tuli">
                                 <rect key="frame" x="15" y="499" width="363" height="34"/>
@@ -117,14 +123,181 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <outlet property="deafPickerField" destination="AZZ-nZ-OwJ" id="vp5-bX-5Vy"/>
                         <outlet property="nameField" destination="AYg-U0-K4p" id="dCf-Mf-ROY"/>
                         <outlet property="saveButton" destination="L4X-Tg-u8u" id="Q56-OF-9Wt"/>
+                        <segue destination="lLk-bg-3gG" kind="presentation" identifier="goEmergencyContact" modalPresentationStyle="fullScreen" id="sGW-Ec-n1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
+        <!--Set Up Emergency Contact-->
+        <scene sceneID="al2-ny-rA5">
+            <objects>
+                <viewController title="Set Up Emergency Contact" id="lLk-bg-3gG" customClass="SetUpEmergencyViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxO-by-hz3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tambahkan Kontak Darurat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66X-Jm-1vn" userLabel="Header">
+                                <rect key="frame" x="15" y="104" width="346" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
+                                <color key="textColor" name="Red"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-wb-r1W">
+                                <rect key="frame" x="15" y="198" width="358" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Nomor ini akan secara otomatis terhubungi ketika sistem keamanan diaktifkan. Anda dapat menambahkan lebih banyak kontak darurat nanti.</string>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-ri-liI" userLabel="EmergencyContacts">
+                                <rect key="frame" x="15" y="344" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="TextFieldColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pickMe:" destination="lLk-bg-3gG" eventType="touchDown" id="E3e-mk-C23"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Kontak Darurat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agj-ad-7ya">
+                                <rect key="frame" x="15" y="315" width="212" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nomor Telepon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-wF-sTA">
+                                <rect key="frame" x="15" y="405" width="152" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-7F-V23" userLabel="PhoneNumber">
+                                <rect key="frame" x="15" y="434" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="TextFieldColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-lg-Vn0">
+                                <rect key="frame" x="131" y="648" width="128" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Simpan" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="White"/>
+                                    <color key="baseBackgroundColor" name="Blue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Eke-z2-M3V"/>
+                                    <action selector="didTapSave:" destination="lLk-bg-3gG" eventType="touchUpInside" id="ob8-Ta-3j8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-Ot-Fud">
+                                <rect key="frame" x="140" y="717" width="113" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Nanti saja">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="PlusJakartaSansRoman-SemiBold"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bTo-83-vyo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactsNameField" destination="Lo3-ri-liI" id="hV2-h2-tov"/>
+                        <outlet property="contactsNumberField" destination="Amd-7F-V23" id="Na3-NA-y6l"/>
+                        <segue destination="Mb9-Ab-ZGR" kind="presentation" identifier="goSetUpPermission" modalPresentationStyle="fullScreen" id="Yj6-MR-MmX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJi-Nb-VDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.62318840579712" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kOp-pI-b1x">
+            <objects>
+                <viewController id="Mb9-Ab-ZGR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ri-kP-BJY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nyalakan beberapa izin akses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pA-Fn-5mv">
+                                <rect key="frame" x="15" y="104" width="345" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
+                                <color key="textColor" name="Red"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi Kamera Mikrofon Foto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odx-P0-ueP">
+                                <rect key="frame" x="170" y="525" width="86" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIH-ep-UeT">
+                                <rect key="frame" x="170" y="446" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PermissionViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="LAL-UF-fF4">
+                                <rect key="frame" x="70" y="219" width="250" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5av-65-YA2">
+                                <rect key="frame" x="200" y="686" width="154" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Selanjutnya" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="White"/>
+                                    <color key="baseBackgroundColor" name="Blue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SSs-rO-zCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-bF-cSH">
+                                <rect key="frame" x="36" y="686" width="154" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Keterangan" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" name="White"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qJg-xq-fcV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hSB-Qn-9qk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwK-cE-DSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="84"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="PermissionViewImage" width="166.5" height="167"/>
         <namedColor name="Blue">
             <color red="0.21600000560283661" green="0.46700000762939453" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -137,6 +310,9 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
         <namedColor name="White">
             <color red="0.9570000171661377" green="0.9570000171661377" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
