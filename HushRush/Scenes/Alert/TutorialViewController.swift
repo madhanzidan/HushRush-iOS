@@ -40,9 +40,6 @@ class TutorialViewController: SpotlightViewController {
             break
         }
         index += 1
-    
-        
-        
     }
     
     func updateAnnotationView(_ animated: Bool) {
