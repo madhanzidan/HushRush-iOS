@@ -33,7 +33,13 @@ class SetUpEmergencyViewController: UIViewController, CNContactPickerDelegate{
         UserDefaults.standard.set(contactsNameField.text!, forKey: "contactName")
         UserDefaults.standard.set(contactsNumberField.text!, forKey: "contactNumber")
         
+        if contactsNameField.text == "" {
+            print("Contact Name Empty")
+        } else if contactsNumberField.text == "" {
+            print("Contact Number Empty")
+        } else {
         performSegue(withIdentifier: "goSetUpPermission", sender: self)
+        }
     }
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {

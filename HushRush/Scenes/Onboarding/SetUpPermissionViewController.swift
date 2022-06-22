@@ -17,11 +17,22 @@ class SetUpPermissionViewController: UIViewController {
 
     }
     
-    @IBAction func didTapNext(_ sender: Any) {
+    @IBAction func didTapNext(_ sender: Any) async {
         cameraPermission()
         microphonePermission()
         locationPermission()
+
+        performSegue(withIdentifier: "goSetUpFinish", sender: self)
+ 
+        
     }
+    @IBAction func didTapDesc(_ sender: Any) {
+        performSegue(withIdentifier: "goDescription", sender: self )
+    }
+    @IBAction func didTapCloseDesc(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     func cameraPermission() {
         
@@ -53,6 +64,7 @@ class SetUpPermissionViewController: UIViewController {
         switch AVAudioSession.sharedInstance().recordPermission {
         case .granted:
             print("Permission Granted")
+           
         
         case .denied:
             print("Permission Denied")

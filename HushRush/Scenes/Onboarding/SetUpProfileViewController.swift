@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class SetUpProfile: UIViewController, UITextFieldDelegate {
+class SetUpProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var birthDateField: UITextField!
@@ -105,7 +105,7 @@ class SetUpProfile: UIViewController, UITextFieldDelegate {
 
 }
 
-extension SetUpProfile: UIPickerViewDelegate, UIPickerViewDataSource {
+extension SetUpProfileViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -127,9 +127,9 @@ extension SetUpProfile: UIPickerViewDelegate, UIPickerViewDataSource {
     
 }
 
-extension SetUpProfile {
+extension SetUpProfileViewController {
     func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(SetUpProfile.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SetUpProfileViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
