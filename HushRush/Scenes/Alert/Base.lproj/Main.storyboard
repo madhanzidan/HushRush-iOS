@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,6 +54,20 @@
                                 <color key="textColor" red="0.0039215686269999999" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR5-EC-IUY">
+                                <rect key="frame" x="332" y="44" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="El6-c6-DBV"/>
+                                    <constraint firstAttribute="height" constant="42" id="YFz-P4-8xz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="infoButtonIcon">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="infoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNa-SZ-uBX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="White"/>
@@ -62,7 +77,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Uc-B8-eR8" secondAttribute="bottom" constant="40" id="Jgb-pX-t4R"/>
                             <constraint firstItem="qAC-eZ-JYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jii-cq-TiK"/>
                             <constraint firstItem="BGU-5p-b7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kd9-5y-gwl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bR5-EC-IUY" secondAttribute="trailing" constant="16" id="Oqp-No-2Wq"/>
                             <constraint firstItem="3UV-EF-Fn1" firstAttribute="top" secondItem="BGU-5p-b7L" secondAttribute="bottom" constant="5" id="Tgp-cm-Fb2"/>
+                            <constraint firstItem="bR5-EC-IUY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="Wwt-qw-edR"/>
                             <constraint firstItem="BGU-5p-b7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="186" id="XF0-Bo-E5N"/>
                             <constraint firstItem="3UV-EF-Fn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eZt-jV-fOX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGU-5p-b7L" secondAttribute="trailing" constant="20" id="iP6-z9-Mqo"/>
@@ -73,10 +90,88 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Alert" image="bell.fill" catalog="system" id="AMH-9K-wnC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alertButton" destination="qAC-eZ-JYU" id="WSO-Yi-Mz0"/>
+                        <outlet property="infoButton" destination="bR5-EC-IUY" id="zhJ-mz-J5e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.153846153846153" y="85.308056872037909"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Ivq-w8-18C">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial" id="HP9-aC-ePd" customClass="TutorialViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dja-tO-Zvr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan tombol ini jika anda dalam bahaya untuk mengaktifkan  sistem keamanan." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-eX-6Ay">
+                                <rect key="frame" x="44" y="196" width="303" height="40.333333333333343"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik Profile untuk mengubah detail pribadi Anda, kontak darurat, dan menjelajahi pengaturan lainnya." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-dz-ayV">
+                                <rect key="frame" x="113" y="657.33333333333337" width="261" height="60.666666666666629"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-hx-Qht">
+                                <rect key="frame" x="157" y="91" width="217" height="40.333333333333343"/>
+                                <string key="text">Tekan tombol info kapan saja
+untuk kembali ke tutorial ini.</string>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Akan ada hitungan mundur 5 detik sebelum sistem keamanan diaktifkan. Anda dapat membatalkannya." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-qf-dTV">
+                                <rect key="frame" x="44" y="196" width="303" height="60.666666666666686"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-Rb-NHO">
+                                <rect key="frame" x="44" y="196" width="303" height="60.666666666666686"/>
+                                <string key="text">Setelah sistem telah diaktifkan,
+anda harus menggunakan nomor PIN anda untuk menonaktifkannya.</string>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hPX-t5-tBj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="fwY-Rb-NHO" secondAttribute="trailing" constant="43" id="04W-82-uFj"/>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="7lk-dz-ayV" secondAttribute="trailing" constant="16" id="36S-WP-urP"/>
+                            <constraint firstItem="fwY-Rb-NHO" firstAttribute="top" secondItem="Dja-tO-Zvr" secondAttribute="top" constant="196" id="78R-4K-sib"/>
+                            <constraint firstItem="fwY-Rb-NHO" firstAttribute="leading" secondItem="hPX-t5-tBj" secondAttribute="leading" constant="44" id="8BF-ni-dLG"/>
+                            <constraint firstItem="kZI-qf-dTV" firstAttribute="top" secondItem="Dja-tO-Zvr" secondAttribute="top" constant="196" id="Ekq-Bl-gdS"/>
+                            <constraint firstItem="C27-eX-6Ay" firstAttribute="leading" secondItem="hPX-t5-tBj" secondAttribute="leading" constant="44" id="JHi-vv-ymE"/>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="kZI-qf-dTV" secondAttribute="trailing" constant="43" id="P8C-DT-4P7"/>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="bottom" secondItem="7lk-dz-ayV" secondAttribute="bottom" constant="92" id="YYu-26-zcu"/>
+                            <constraint firstItem="C27-eX-6Ay" firstAttribute="top" secondItem="Dja-tO-Zvr" secondAttribute="top" constant="196" id="erv-cI-f8H"/>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="AjX-hx-Qht" secondAttribute="trailing" constant="16" id="gFs-mY-pIb"/>
+                            <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="C27-eX-6Ay" secondAttribute="trailing" constant="43" id="lgG-2U-VUD"/>
+                            <constraint firstItem="AjX-hx-Qht" firstAttribute="top" secondItem="Dja-tO-Zvr" secondAttribute="top" constant="91" id="mDz-yy-iBY"/>
+                            <constraint firstItem="7lk-dz-ayV" firstAttribute="leading" secondItem="hPX-t5-tBj" secondAttribute="leading" constant="113" id="sL6-dD-i4I"/>
+                            <constraint firstItem="kZI-qf-dTV" firstAttribute="leading" secondItem="hPX-t5-tBj" secondAttribute="leading" constant="44" id="ylX-FE-JQj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="annotationViews" destination="C27-eX-6Ay" collectionClass="NSMutableArray" id="546-hl-tyo"/>
+                        <outletCollection property="annotationViews" destination="kZI-qf-dTV" collectionClass="NSMutableArray" id="7Mv-CI-bDA"/>
+                        <outletCollection property="annotationViews" destination="fwY-Rb-NHO" collectionClass="NSMutableArray" id="TW7-sd-vwF"/>
+                        <outletCollection property="annotationViews" destination="7lk-dz-ayV" collectionClass="NSMutableArray" id="JiK-0B-YJc"/>
+                        <outletCollection property="annotationViews" destination="AjX-hx-Qht" collectionClass="NSMutableArray" id="uZv-aS-SH5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dap-Wf-cFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829.23076923076917" y="84.597156398104261"/>
         </scene>
         <!--Cancel Alert View Controller-->
         <scene sceneID="7Nh-kS-vrY">
@@ -168,11 +263,15 @@ Mengirim peringatan ke kontak darurat</string>
     <resources>
         <image name="Emergency Button Transparent-1" width="385" height="385"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="infoButtonIcon" width="64" height="64"/>
         <namedColor name="DarkBlue">
             <color red="0.0040000001899898052" green="0.10999999940395355" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="0.9570000171661377" green="0.9570000171661377" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

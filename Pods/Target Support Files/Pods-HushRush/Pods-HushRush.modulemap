@@ -1,0 +1,6 @@
+framework module Pods_HushRush {
+  umbrella header "Pods-HushRush-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B93B238A75B46FDCEAD586 /* Pods_HushRush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CB180BE3E9B310B5DEBCE /* Pods_HushRush.framework */; };
+		4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
+		A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
 		A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB8202855E2230044A5D6 /* AlertViewController.swift */; };
@@ -70,8 +73,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D7CB180BE3E9B310B5DEBCE /* Pods_HushRush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HushRush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		314219D0031398CB3C7CAA62 /* Pods-HushRush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HushRush.debug.xcconfig"; path = "Target Support Files/Pods-HushRush/Pods-HushRush.debug.xcconfig"; sourceTree = "<group>"; };
+		3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyButtonWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
+		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FB81C2855E2230044A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonWidget.swift; sourceTree = "<group>"; };
 		A8FB6555285E1C5300AB4028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8FB6557285E1C5300AB4028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE10E1DBC380EB84D0200CD1 /* Pods-HushRush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HushRush.release.xcconfig"; path = "Target Support Files/Pods-HushRush/Pods-HushRush.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B93B238A75B46FDCEAD586 /* Pods_HushRush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,12 +136,24 @@
 			files = (
 				A8FB6551285E1C5300AB4028 /* SwiftUI.framework in Frameworks */,
 				A8FB654F285E1C5300AB4028 /* WidgetKit.framework in Frameworks */,
+				4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D77280F79785C7C74A64979 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */,
+				6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */,
+				314219D0031398CB3C7CAA62 /* Pods-HushRush.debug.xcconfig */,
+				DE10E1DBC380EB84D0200CD1 /* Pods-HushRush.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A82FB8102855E2230044A5D6 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +161,7 @@
 				A8FB6552285E1C5300AB4028 /* EmergencyButtonWidget */,
 				A8FB654D285E1C5300AB4028 /* Frameworks */,
 				A82FB81A2855E2230044A5D6 /* Products */,
+				4D77280F79785C7C74A64979 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				A82FB8202855E2230044A5D6 /* AlertViewController.swift */,
+				A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */,
 				4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */,
 				A82FB8222855E2230044A5D6 /* Main.storyboard */,
 			);
@@ -266,6 +291,8 @@
 			children = (
 				A8FB654E285E1C5300AB4028 /* WidgetKit.framework */,
 				A8FB6550285E1C5300AB4028 /* SwiftUI.framework */,
+				3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */,
+				2D7CB180BE3E9B310B5DEBCE /* Pods_HushRush.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,10 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A82FB8302855E2240044A5D6 /* Build configuration list for PBXNativeTarget "HushRush" */;
 			buildPhases = (
+				BFF50C2CBC31D0BB8A7E1D52 /* [CP] Check Pods Manifest.lock */,
 				A82FB8152855E2230044A5D6 /* Sources */,
 				A82FB8162855E2230044A5D6 /* Frameworks */,
 				A82FB8172855E2230044A5D6 /* Resources */,
 				A8FB655A285E1C5400AB4028 /* Embed App Extensions */,
+				C5AE54216439151732A5284A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +335,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8FB655E285E1C5400AB4028 /* Build configuration list for PBXNativeTarget "EmergencyButtonWidgetExtension" */;
 			buildPhases = (
+				381F61B68DBE80D24043F948 /* [CP] Check Pods Manifest.lock */,
 				A8FB6548285E1C5300AB4028 /* Sources */,
 				A8FB6549285E1C5300AB4028 /* Frameworks */,
 				A8FB654A285E1C5300AB4028 /* Resources */,
@@ -395,6 +425,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		381F61B68DBE80D24043F948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmergencyButtonWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFF50C2CBC31D0BB8A7E1D52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HushRush-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5AE54216439151732A5284A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HushRush/Pods-HushRush-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HushRush/Pods-HushRush-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HushRush/Pods-HushRush-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A82FB8152855E2230044A5D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -409,6 +503,7 @@
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
 				A82FB8272855E2230044A5D6 /* HushRush.xcdatamodeld in Sources */,
 				A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */,
+				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +662,7 @@
 		};
 		A82FB8312855E2240044A5D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314219D0031398CB3C7CAA62 /* Pods-HushRush.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -596,6 +692,7 @@
 		};
 		A82FB8322855E2240044A5D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE10E1DBC380EB84D0200CD1 /* Pods-HushRush.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,6 +722,7 @@
 		};
 		A8FB655C285E1C5400AB4028 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -653,6 +751,7 @@
 		};
 		A8FB655D285E1C5400AB4028 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
