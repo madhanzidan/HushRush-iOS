@@ -17,7 +17,7 @@ class SetUpPermissionViewController: UIViewController {
 
     }
     
-    @IBAction func didTapNext(_ sender: Any) async {
+    @IBAction func didTapNext(_ sender: Any) {
         cameraPermission()
         microphonePermission()
         locationPermission()
