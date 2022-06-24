@@ -14,6 +14,12 @@ import AVFoundation
 class EmergencyViewController: UIViewController {
 
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var previewView: UIView!
+    
+    var captureSession: AVCaptureSession!
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    var stillImageOutput: AVCapturePhotoOutput!
+    
     let masterVolumeSlider: MPVolumeView = MPVolumeView()
     
     override func viewDidLoad() {
@@ -29,12 +35,40 @@ class EmergencyViewController: UIViewController {
         }
         
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if let view = masterVolumeSlider.subviews.first as? UISlider{
             view.value = 1.0
         }
+        
+        //MARK: - Camera View
+        captureSession = AVCaptureSession()
+        captureSession.sessionPreset = .medium
+        
+        
+        guard let frontCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
+        else {
+            print("Unable to access back camera!")
+            return
+        }
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: frontCamera)
+            //Step 9
+            stillImageOutput = AVCapturePhotoOutput()
+            
+            if captureSession.canAddInput(input) && captureSession.canAddOutput(stillImageOutput) {
+                captureSession.addInput(input)
+                captureSession.addOutput(stillImageOutput)
+                setupLivePreview()
+            }
+        }
+        catch let error  {
+            print("Error Unable to initialize back camera:  (error.localizedDescription)")
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +104,36 @@ class EmergencyViewController: UIViewController {
             present(alert, animated: true)
         }
     }
+    
+    //MARK: - Camera View
+    func setupLivePreview() {
+        
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        
+        videoPreviewLayer.videoGravity = .resizeAspectFill
+        videoPreviewLayer.connection?.videoOrientation = .portrait
+        previewView.layer.addSublayer(videoPreviewLayer)
+        
+        //Step12
+        
+        DispatchQueue.global(qos: .userInitiated).async { //[weak self] in
+            self.captureSession.startRunning()
+            //Step 13
+            
+            DispatchQueue.main.async {
+                self.videoPreviewLayer.frame = self.previewView.bounds
+            }
+        }
+    }
+    
+    func photoOutput( output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+
+            guard let imageData = photo.fileDataRepresentation()
+            else { return }
+
+            let image = UIImage(data: imageData)
+            //captureImageView.image = image
+        }
     
     //MARK: - Function to modify view
     func setGradientBackground() {

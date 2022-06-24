@@ -52,6 +52,11 @@ have been alerted.</string>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmW-wq-mRk">
+                                <rect key="frame" x="83" y="182" width="225" height="399"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Red"/>
@@ -69,6 +74,7 @@ have been alerted.</string>
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="Jef-FB-sF5" id="MDV-1d-QZl"/>
+                        <outlet property="previewView" destination="lmW-wq-mRk" id="CNB-C8-o5L"/>
                         <segue destination="AKL-Eq-wdQ" kind="presentation" identifier="goToDismiss" modalPresentationStyle="fullScreen" id="KzI-gV-aYE"/>
                     </connections>
                 </viewController>

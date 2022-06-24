@@ -38,9 +38,17 @@
 		A83054D1285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A83054C3285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf */; };
 		A83054D2285980DA005574E5 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A83054C4285980DA005574E5 /* PlusJakartaSans-Regular.ttf */; };
 		A83054D3285980DA005574E5 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A83054C5285980DA005574E5 /* PlusJakartaSans-SemiBold.ttf */; };
-		A83054DA285981AD005574E5 /* siren_test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A83054D9285981AD005574E5 /* siren_test.mp3 */; };
 		A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83054DC285985EB005574E5 /* TabBarViewController.swift */; };
 		A83054DF285985F8005574E5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83054DE285985F8005574E5 /* TabBar.storyboard */; };
+		A8D605CF2865ADE10070D4EF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605C92865ADE10070D4EF /* OnboardingViewController.swift */; };
+		A8D605D02865ADE10070D4EF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D605CA2865ADE10070D4EF /* Onboarding.storyboard */; };
+		A8D605D12865ADE10070D4EF /* SetUpEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605CB2865ADE10070D4EF /* SetUpEmergencyViewController.swift */; };
+		A8D605D22865ADE10070D4EF /* SetUpPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605CC2865ADE10070D4EF /* SetUpPermissionViewController.swift */; };
+		A8D605D32865ADE10070D4EF /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605CD2865ADE10070D4EF /* SetUpProfileViewController.swift */; };
+		A8D605D42865ADE10070D4EF /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605CE2865ADE10070D4EF /* OnboardingCollectionViewCell.swift */; };
+		A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605D52865AE130070D4EF /* OnboardingSlide.swift */; };
+		A8D605D82865B3B90070D4EF /* SetUpFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */; };
+		A8D605DA2865BF790070D4EF /* siren_final.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8D605D92865BF790070D4EF /* siren_final.mp3 */; };
 		A8FB654F285E1C5300AB4028 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB654E285E1C5300AB4028 /* WidgetKit.framework */; };
 		A8FB6551285E1C5300AB4028 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB6550285E1C5300AB4028 /* SwiftUI.framework */; };
 		A8FB6554285E1C5300AB4028 /* EmergencyButtonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */; };
@@ -109,9 +117,17 @@
 		A83054C3285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-BoldItalic.ttf"; path = "Themes/Fonts/PlusJakartaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A83054C4285980DA005574E5 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Regular.ttf"; path = "Themes/Fonts/PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
 		A83054C5285980DA005574E5 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-SemiBold.ttf"; path = "Themes/Fonts/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		A83054D9285981AD005574E5 /* siren_test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren_test.mp3; sourceTree = "<group>"; };
 		A83054DC285985EB005574E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A83054DE285985F8005574E5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		A8D605C92865ADE10070D4EF /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A8D605CA2865ADE10070D4EF /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		A8D605CB2865ADE10070D4EF /* SetUpEmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpEmergencyViewController.swift; sourceTree = "<group>"; };
+		A8D605CC2865ADE10070D4EF /* SetUpPermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpPermissionViewController.swift; sourceTree = "<group>"; };
+		A8D605CD2865ADE10070D4EF /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpProfileViewController.swift; sourceTree = "<group>"; };
+		A8D605CE2865ADE10070D4EF /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8D605D52865AE130070D4EF /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFinishViewController.swift; sourceTree = "<group>"; };
+		A8D605D92865BF790070D4EF /* siren_final.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren_final.mp3; sourceTree = "<group>"; };
 		A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmergencyButtonWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FB654E285E1C5300AB4028 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A8FB6550285E1C5300AB4028 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -224,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				4E897D562858534600B64A35 /* EmergencySingleton.swift */,
+				A8D605D52865AE130070D4EF /* OnboardingSlide.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -231,6 +248,7 @@
 		A82FB8532855E8AA0044A5D6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A8D605C82865ADB90070D4EF /* Onboarding */,
 				A83054DB285985D5005574E5 /* TabBar */,
 				A82FB8542855E9250044A5D6 /* Alert */,
 				A82FB86028560D5A0044A5D6 /* Emergency */,
@@ -272,7 +290,7 @@
 		A83054D82859818B005574E5 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				A83054D9285981AD005574E5 /* siren_test.mp3 */,
+				A8D605D92865BF790070D4EF /* siren_final.mp3 */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -284,6 +302,20 @@
 				A83054DE285985F8005574E5 /* TabBar.storyboard */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A8D605C82865ADB90070D4EF /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A8D605CA2865ADE10070D4EF /* Onboarding.storyboard */,
+				A8D605CE2865ADE10070D4EF /* OnboardingCollectionViewCell.swift */,
+				A8D605C92865ADE10070D4EF /* OnboardingViewController.swift */,
+				A8D605CB2865ADE10070D4EF /* SetUpEmergencyViewController.swift */,
+				A8D605CC2865ADE10070D4EF /* SetUpPermissionViewController.swift */,
+				A8D605CD2865ADE10070D4EF /* SetUpProfileViewController.swift */,
+				A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		A8FB654D285E1C5300AB4028 /* Frameworks */ = {
@@ -391,7 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A83054DA285981AD005574E5 /* siren_test.mp3 in Resources */,
 				A83054CE285980DA005574E5 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
 				A82FB82C2855E2240044A5D6 /* LaunchScreen.storyboard in Resources */,
 				A82FB85A2855E98F0044A5D6 /* Profile.storyboard in Resources */,
@@ -402,12 +433,14 @@
 				A83054CD285980DA005574E5 /* PlusJakartaSans-Italic.ttf in Resources */,
 				A83054C7285980DA005574E5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				A83054D1285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
+				A8D605D02865ADE10070D4EF /* Onboarding.storyboard in Resources */,
 				A83054CF285980DA005574E5 /* PlusJakartaSans-Bold.ttf in Resources */,
 				A83054D0285980DA005574E5 /* PlusJakartaSans-Light.ttf in Resources */,
 				A82FB8292855E2240044A5D6 /* Assets.xcassets in Resources */,
 				A83054C6285980DA005574E5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				A83054C8285980DA005574E5 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
 				A82FB8242855E2230044A5D6 /* Main.storyboard in Resources */,
+				A8D605DA2865BF790070D4EF /* siren_final.mp3 in Resources */,
 				A83054D2285980DA005574E5 /* PlusJakartaSans-Regular.ttf in Resources */,
 				A83054CB285980DA005574E5 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */,
 				A83054DF285985F8005574E5 /* TabBar.storyboard in Resources */,
@@ -494,17 +527,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D605D12865ADE10070D4EF /* SetUpEmergencyViewController.swift in Sources */,
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				A8D605D42865ADE10070D4EF /* OnboardingCollectionViewCell.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
 				A82FB8582855E97E0044A5D6 /* ProfileViewController.swift in Sources */,
+				A8D605D32865ADE10070D4EF /* SetUpProfileViewController.swift in Sources */,
 				A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */,
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
+				A8D605CF2865ADE10070D4EF /* OnboardingViewController.swift in Sources */,
 				A82FB8272855E2230044A5D6 /* HushRush.xcdatamodeld in Sources */,
 				A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */,
 				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
+				A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
+				A8D605D22865ADE10070D4EF /* SetUpPermissionViewController.swift in Sources */,
+				A8D605D82865B3B90070D4EF /* SetUpFinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

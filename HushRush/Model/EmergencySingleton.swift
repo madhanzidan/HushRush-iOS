@@ -19,7 +19,7 @@ class EmergencySingleton {
     static let sharedInstance = EmergencySingleton()
   
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "siren_test", withExtension: "mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "siren_final", withExtension: "mp3") else { return }
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
