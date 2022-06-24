@@ -11,16 +11,7 @@
 		4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
-
-		934BFB9428603E8400F4BE59 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934BFB9328603E8400F4BE59 /* SetUpProfileViewController.swift */; };
-		934BFB9628603E9600F4BE59 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934BFB9528603E9600F4BE59 /* Onboarding.storyboard */; };
-		93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */; };
-		93E678FD28617D0500776E7F /* SetUpPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */; };
-		93E678FF2861898500776E7F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E678FE2861898500776E7F /* OnboardingViewController.swift */; };
-		93E6790128618CCD00776E7F /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6790028618CCD00776E7F /* OnboardingSlide.swift */; };
-		93E67903286190DE00776E7F /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E67902286190DE00776E7F /* OnboardingCollectionViewCell.swift */; };
 		A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */; };
-
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
 		A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB8202855E2230044A5D6 /* AlertViewController.swift */; };
@@ -88,13 +79,6 @@
 		4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
-		934BFB9328603E8400F4BE59 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileViewController.swift; sourceTree = "<group>"; };
-		934BFB9528603E9600F4BE59 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpEmergencyViewController.swift; sourceTree = "<group>"; };
-		93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpPermissionViewController.swift; sourceTree = "<group>"; };
-		93E678FE2861898500776E7F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		93E6790028618CCD00776E7F /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
-		93E67902286190DE00776E7F /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,18 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		934BFB9228603E5B00F4BE59 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				93E678FE2861898500776E7F /* OnboardingViewController.swift */,
-				93E67902286190DE00776E7F /* OnboardingCollectionViewCell.swift */,
-				934BFB9328603E8400F4BE59 /* SetUpProfileViewController.swift */,
-				93E678FA2860CAC600776E7F /* SetUpEmergencyViewController.swift */,
-				93E678FC28617D0500776E7F /* SetUpPermissionViewController.swift */,
-				934BFB9528603E9600F4BE59 /* Onboarding.storyboard */,
-			);
-			path = Onboarding;
-
 		4D77280F79785C7C74A64979 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				4E897D562858534600B64A35 /* EmergencySingleton.swift */,
-				93E6790028618CCD00776E7F /* OnboardingSlide.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,7 +231,6 @@
 		A82FB8532855E8AA0044A5D6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				934BFB9228603E5B00F4BE59 /* Onboarding */,
 				A83054DB285985D5005574E5 /* TabBar */,
 				A82FB8542855E9250044A5D6 /* Alert */,
 				A82FB86028560D5A0044A5D6 /* Emergency */,
@@ -432,7 +402,6 @@
 				A83054CD285980DA005574E5 /* PlusJakartaSans-Italic.ttf in Resources */,
 				A83054C7285980DA005574E5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				A83054D1285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
-				934BFB9628603E9600F4BE59 /* Onboarding.storyboard in Resources */,
 				A83054CF285980DA005574E5 /* PlusJakartaSans-Bold.ttf in Resources */,
 				A83054D0285980DA005574E5 /* PlusJakartaSans-Light.ttf in Resources */,
 				A82FB8292855E2240044A5D6 /* Assets.xcassets in Resources */,
@@ -527,23 +496,14 @@
 			files = (
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
-				93E678FD28617D0500776E7F /* SetUpPermissionViewController.swift in Sources */,
-				93E67903286190DE00776E7F /* OnboardingCollectionViewCell.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
-				93E678FB2860CAC600776E7F /* SetUpEmergencyViewController.swift in Sources */,
 				A82FB8582855E97E0044A5D6 /* ProfileViewController.swift in Sources */,
 				A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */,
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
 				A82FB8272855E2230044A5D6 /* HushRush.xcdatamodeld in Sources */,
-				93E6790128618CCD00776E7F /* OnboardingSlide.swift in Sources */,
 				A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */,
-
-				93E678FF2861898500776E7F /* OnboardingViewController.swift in Sources */,
-				934BFB9428603E8400F4BE59 /* SetUpProfileViewController.swift in Sources */,
-
 				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
-
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,7 +669,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Q7D2536H4;
+				DEVELOPMENT_TEAM = NRD8HSMRZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HushRush/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -739,7 +699,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Q7D2536H4;
+				DEVELOPMENT_TEAM = NRD8HSMRZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HushRush/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
