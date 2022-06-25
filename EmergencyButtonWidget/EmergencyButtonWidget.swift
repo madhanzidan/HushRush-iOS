@@ -45,10 +45,14 @@ struct EmergencyButtonWidgetEntryView : View {
     var body: some View {
         ZStack {
             Color("White")
-            Image("EmergencyButtonforWidget")
+            Image("WidgetIcon")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, alignment: .center)
                 .padding(.all)
+                .offset(y: 12)
+                
+            
             
         }
     }
