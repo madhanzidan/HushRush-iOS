@@ -22,7 +22,7 @@ class CancelAlertViewController: UIViewController {
             print("Timer fired")
             self.CountdownLabel.text = "\(counter)"
             counter -= 1
-            
+
             if counter < 0 {
                 self.CountdownLabel.font = self.CountdownLabel.font.withSize(50)
                 self.CountdownLabel.text = "Success"
