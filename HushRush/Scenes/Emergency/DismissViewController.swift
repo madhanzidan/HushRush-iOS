@@ -11,7 +11,7 @@ class DismissViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var counter = 3
+        var counter = 10
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
             timer in
             counter -= 1

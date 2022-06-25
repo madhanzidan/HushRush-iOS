@@ -17,7 +17,7 @@ class CancelAlertViewController: UIViewController {
         super.viewDidLoad()
         
         var counter = 3
-        cancelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        cancelTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) {
             timer in
             print("Timer fired")
             self.CountdownLabel.text = "\(counter)"
