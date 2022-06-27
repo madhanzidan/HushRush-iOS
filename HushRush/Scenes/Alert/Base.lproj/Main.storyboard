@@ -210,34 +210,29 @@ Sistem Peringatan</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3X-jb-5vj">
-                                <rect key="frame" x="94" y="546.66666666666663" width="202" height="126.33333333333337"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlertInfo" translatesAutoresizingMaskIntoConstraints="NO" id="tav-Vi-0jx">
+                                <rect key="frame" x="88" y="445" width="213" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="xIX-HN-EOk"/>
+                                    <constraint firstAttribute="width" constant="213" id="bPn-lg-B1V"/>
+                                    <constraint firstAttribute="height" constant="123" id="ipE-GG-v16"/>
                                 </constraints>
-                                <string key="text">Membunyikan alarm
-Menyalakan senter
-Merekam video
-Mengirim peringatan ke kontak darurat</string>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iog-9C-XuO"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.29019607843137252" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="fNj-tJ-F28" secondAttribute="trailing" constant="20" id="1nk-Bm-gKB"/>
                             <constraint firstItem="iog-9C-XuO" firstAttribute="bottom" secondItem="ntd-cS-NOP" secondAttribute="bottom" constant="40" id="3AS-bG-foA"/>
-                            <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="H3X-jb-5vj" secondAttribute="bottom" constant="45" id="8FB-GF-T5k"/>
                             <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="MSh-BV-ggV" secondAttribute="trailing" constant="20" id="DCk-Uf-K1s"/>
                             <constraint firstItem="ntd-cS-NOP" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="97" id="GXs-gW-rtN"/>
                             <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="ntd-cS-NOP" secondAttribute="trailing" constant="97" id="MQq-dc-ian"/>
                             <constraint firstItem="MSh-BV-ggV" firstAttribute="top" secondItem="DWG-Db-3VV" secondAttribute="top" constant="128" id="Pfh-zm-Ed0"/>
                             <constraint firstItem="fNj-tJ-F28" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="SI4-0z-11J"/>
                             <constraint firstItem="MSh-BV-ggV" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="WVf-b6-BMF"/>
+                            <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="tav-Vi-0jx" secondAttribute="bottom" constant="150" id="mO8-Cn-MT6"/>
                             <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="qfQ-3F-Oic"/>
-                            <constraint firstItem="H3X-jb-5vj" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="94" id="v2n-d5-w7e"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="tav-Vi-0jx" secondAttribute="trailing" constant="89" id="vCJ-Lx-lZ7"/>
+                            <constraint firstItem="tav-Vi-0jx" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="88" id="vri-7I-EgO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
@@ -261,6 +256,7 @@ Mengirim peringatan ke kontak darurat</string>
         </scene>
     </scenes>
     <resources>
+        <image name="AlertInfo" width="710" height="410"/>
         <image name="Emergency Button Transparent-1" width="385" height="385"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="infoButtonIcon" width="64" height="64"/>
