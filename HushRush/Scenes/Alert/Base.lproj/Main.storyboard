@@ -20,7 +20,7 @@
         <!--Alert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="AlertViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertView" id="BYZ-38-t0r" customClass="AlertViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Emergency Button Transparent-1"/>
                                 <connections>
-                                    <segue destination="8Sr-2A-hHK" kind="presentation" id="hEC-hS-Wen"/>
+                                    <segue destination="8Sr-2A-hHK" kind="presentation" modalPresentationStyle="fullScreen" id="hEC-hS-Wen"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sistem peringatan akan diaktifkan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-B8-eR8">
@@ -77,6 +77,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Uc-B8-eR8" secondAttribute="bottom" constant="40" id="Jgb-pX-t4R"/>
                             <constraint firstItem="qAC-eZ-JYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jii-cq-TiK"/>
                             <constraint firstItem="BGU-5p-b7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kd9-5y-gwl"/>
+                            <constraint firstItem="bR5-EC-IUY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="O7M-Dr-d25"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bR5-EC-IUY" secondAttribute="trailing" constant="16" id="Oqp-No-2Wq"/>
                             <constraint firstItem="3UV-EF-Fn1" firstAttribute="top" secondItem="BGU-5p-b7L" secondAttribute="bottom" constant="5" id="Tgp-cm-Fb2"/>
                             <constraint firstItem="bR5-EC-IUY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="Wwt-qw-edR"/>
@@ -153,6 +154,7 @@ anda harus menggunakan nomor PIN anda untuk menonaktifkannya.</string>
                             <constraint firstItem="C27-eX-6Ay" firstAttribute="leading" secondItem="hPX-t5-tBj" secondAttribute="leading" constant="44" id="JHi-vv-ymE"/>
                             <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="kZI-qf-dTV" secondAttribute="trailing" constant="43" id="P8C-DT-4P7"/>
                             <constraint firstItem="hPX-t5-tBj" firstAttribute="bottom" secondItem="7lk-dz-ayV" secondAttribute="bottom" constant="92" id="YYu-26-zcu"/>
+                            <constraint firstItem="AjX-hx-Qht" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hPX-t5-tBj" secondAttribute="leading" symbolic="YES" id="a6F-Y7-J4k"/>
                             <constraint firstItem="C27-eX-6Ay" firstAttribute="top" secondItem="Dja-tO-Zvr" secondAttribute="top" constant="196" id="erv-cI-f8H"/>
                             <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="AjX-hx-Qht" secondAttribute="trailing" constant="16" id="gFs-mY-pIb"/>
                             <constraint firstItem="hPX-t5-tBj" firstAttribute="trailing" secondItem="C27-eX-6Ay" secondAttribute="trailing" constant="43" id="lgG-2U-VUD"/>
@@ -176,7 +178,7 @@ anda harus menggunakan nomor PIN anda untuk menonaktifkannya.</string>
         <!--Cancel Alert View Controller-->
         <scene sceneID="7Nh-kS-vrY">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="8Sr-2A-hHK" customClass="CancelAlertViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CancelAlertView" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="8Sr-2A-hHK" customClass="CancelAlertViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DWG-Db-3VV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,14 +238,15 @@ Mengirim peringatan ke kontak darurat</string>
                             <constraint firstItem="MSh-BV-ggV" firstAttribute="top" secondItem="DWG-Db-3VV" secondAttribute="top" constant="128" id="Pfh-zm-Ed0"/>
                             <constraint firstItem="fNj-tJ-F28" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="SI4-0z-11J"/>
                             <constraint firstItem="MSh-BV-ggV" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="WVf-b6-BMF"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="H3X-jb-5vj" secondAttribute="trailing" constant="94" id="Y0k-nB-X54"/>
                             <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="qfQ-3F-Oic"/>
-                            <constraint firstItem="H3X-jb-5vj" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="94" id="v2n-d5-w7e"/>
+                            <constraint firstItem="H3X-jb-5vj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iog-9C-XuO" secondAttribute="leading" id="v2n-d5-w7e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
                     <connections>
-                        <outlet property="CountdownLabel" destination="MSh-BV-ggV" id="jIy-54-fpT"/>
-                        <outlet property="cancelButton" destination="ntd-cS-NOP" id="vHO-Zd-7Xh"/>
+                        <outlet property="cancelButton" destination="ntd-cS-NOP" id="GMr-cM-bsC"/>
+                        <outlet property="countdownLabel" destination="MSh-BV-ggV" id="hpX-c5-ls1"/>
                         <segue destination="1DY-bV-67w" kind="presentation" identifier="goToEmergency" modalPresentationStyle="fullScreen" id="zsp-eX-aPB"/>
                     </connections>
                 </viewController>

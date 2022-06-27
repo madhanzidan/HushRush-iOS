@@ -9,6 +9,9 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    
+    
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
@@ -40,19 +43,27 @@ struct SimpleEntry: TimelineEntry {
 
 struct EmergencyButtonWidgetEntryView : View {
     var entry: Provider.Entry
+
+    private static let deeplinkURL: URL = URL(string: "widget://")!
+    
     @Environment(\.widgetFamily) var widgetFamily
     
     var body: some View {
         ZStack {
             Color("White")
-            Image("EmergencyButtonforWidget")
+            Image("WidgetIcon")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, alignment: .center)
                 .padding(.all)
-            
+                .offset(y: 12)
+                
         }
+        .widgetURL(EmergencyButtonWidgetEntryView.deeplinkURL)
+        
     }
 }
+
 
 @main
 struct EmergencyButtonWidget: Widget {
