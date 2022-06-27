@@ -8,13 +8,16 @@
 import WidgetKit
 import SwiftUI
 
+let alertURL = URL(string: "emergencyButtonWidget://alert")
+
 struct Provider: TimelineProvider {
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), url: alertURL)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), url: alertURL)
         completion(entry)
     }
 
@@ -25,7 +28,7 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+            let entry = SimpleEntry(date: entryDate, url: alertURL)
             entries.append(entry)
         }
 
@@ -36,6 +39,9 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    
+    //--
+    let url: URL?
 }
 
 struct EmergencyButtonWidgetEntryView : View {
@@ -51,6 +57,7 @@ struct EmergencyButtonWidgetEntryView : View {
                 .padding(.all)
             
         }
+        .widgetURL(entry.url)
     }
 }
 
@@ -71,11 +78,11 @@ struct EmergencyButtonWidget: Widget {
 struct EmergencyButtonWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EmergencyButtonWidgetEntryView(entry: SimpleEntry(date: Date()))
+            EmergencyButtonWidgetEntryView(entry: SimpleEntry(date: Date(), url: alertURL))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
     
             
-            EmergencyButtonWidgetEntryView(entry: SimpleEntry(date: Date()))
+            EmergencyButtonWidgetEntryView(entry: SimpleEntry(date: Date(), url: alertURL))
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
         

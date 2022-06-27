@@ -11,6 +11,7 @@
 		4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
+		4E9D39052868F7A90054EA51 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D39042868F7A90054EA51 /* EmergencyContactViewController.swift */; };
 		A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
@@ -79,6 +80,7 @@
 		4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
+		4E9D39042868F7A90054EA51 /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
 		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 			children = (
 				A82FB8572855E97E0044A5D6 /* ProfileViewController.swift */,
 				A82FB8592855E98F0044A5D6 /* Profile.storyboard */,
+				4E9D39042868F7A90054EA51 /* EmergencyContactViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 			files = (
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				4E9D39052868F7A90054EA51 /* EmergencyContactViewController.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
 				A82FB8582855E97E0044A5D6 /* ProfileViewController.swift in Sources */,
@@ -596,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -650,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
