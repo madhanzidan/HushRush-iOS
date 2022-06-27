@@ -108,35 +108,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan tombol ini jika anda dalam bahaya untuk mengaktifkan  sistem keamanan." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-eX-6Ay">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan tombol ini untuk menyalakan sistem keamanan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-eX-6Ay">
                                 <rect key="frame" x="44" y="196" width="303" height="40.333333333333343"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik Profile untuk mengubah detail pribadi Anda, kontak darurat, dan menjelajahi pengaturan lainnya." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-dz-ayV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klik Profile untuk mengubah detail pribadi Anda, kontak darurat, dan menjelajahi pengaturan lainnya." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-dz-ayV">
                                 <rect key="frame" x="113" y="657.33333333333337" width="261" height="60.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-hx-Qht">
-                                <rect key="frame" x="157" y="91" width="217" height="40.333333333333343"/>
-                                <string key="text">Tekan tombol info kapan saja
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-hx-Qht">
+                                <rect key="frame" x="167.33333333333337" y="91" width="206.66666666666663" height="40.333333333333343"/>
+                                <string key="text">Tekan tombol info
 untuk kembali ke tutorial ini.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Akan ada hitungan mundur 5 detik sebelum sistem keamanan diaktifkan. Anda dapat membatalkannya." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-qf-dTV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setelah menekan tombol ini, alarm akan menyala dalam 3 detik. Anda masih bisa membatalkannya." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-qf-dTV">
                                 <rect key="frame" x="44" y="196" width="303" height="60.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-Rb-NHO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-Rb-NHO">
                                 <rect key="frame" x="44" y="196" width="303" height="60.666666666666686"/>
-                                <string key="text">Setelah sistem telah diaktifkan,
+                                <string key="text">Setelah sistem menyala,
 anda harus menggunakan nomor PIN anda untuk menonaktifkannya.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
                                 <color key="textColor" name="White"/>
@@ -234,7 +234,7 @@ Sistem Peringatan</string>
                             <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="tav-Vi-0jx" secondAttribute="bottom" constant="150" id="mO8-Cn-MT6"/>
                             <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="qfQ-3F-Oic"/>
                             <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="tav-Vi-0jx" secondAttribute="trailing" constant="89" id="vCJ-Lx-lZ7"/>
-                            <constraint firstItem="tav-Vi-0jx" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="88" id="vri-7I-EgO"/>  
+                            <constraint firstItem="tav-Vi-0jx" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="88" id="vri-7I-EgO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>

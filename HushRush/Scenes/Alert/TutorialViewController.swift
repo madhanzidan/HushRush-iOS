@@ -31,7 +31,7 @@ class TutorialViewController: SpotlightViewController {
         case 2:
             spotlightView.appear(Spotlight.Oval(center: CGPoint(x: 195, y: 438), diameter: 308))
         case 3:
-            spotlightView.appear(Spotlight.Oval(center: CGPoint(x: 292, y: 785), diameter: 100))
+            spotlightView.appear(Spotlight.Oval(center: CGPoint(x: 291.5, y: 785), diameter: 80))
         case 4:
             spotlightView.appear(Spotlight.Oval(center: CGPoint(x: 353, y: 65), diameter: 34))
         case 5:
