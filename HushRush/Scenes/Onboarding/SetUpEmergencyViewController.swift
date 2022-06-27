@@ -13,11 +13,17 @@ class SetUpEmergencyViewController: UIViewController, CNContactPickerDelegate{
 
     @IBOutlet weak var contactsNameField: UITextField!
     @IBOutlet weak var contactsNumberField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         retrieveContacts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setButtonShadow(button: saveButton)
+
     }
     
     @IBAction func pickMe(_ sender: Any) {
@@ -75,6 +81,14 @@ class SetUpEmergencyViewController: UIViewController, CNContactPickerDelegate{
         let contactNumberField = UserDefaults.standard.string(forKey: "contactNumber")
         
         //print(contactNameField)
+    }
+    
+    func setButtonShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = .zero
+        button.layer.shadowOpacity = 0.4
+        button.layer.shadowRadius = 10.0
+        button.layer.masksToBounds = false
     }
 }
 

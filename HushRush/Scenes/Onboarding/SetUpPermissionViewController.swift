@@ -12,10 +12,15 @@ import CoreLocation
 
 class SetUpPermissionViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var descriptionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+
     
     @IBAction func didTapNext(_ sender: Any) {
         cameraPermission()
@@ -84,6 +89,13 @@ class SetUpPermissionViewController: UIViewController {
         LocationManager.shared.requestLocationAuthorization()
     }
 
+    func setButtonShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = .zero
+        button.layer.shadowOpacity = 0.4
+        button.layer.shadowRadius = 10.0
+        button.layer.masksToBounds = false
+    }
 
 }
 

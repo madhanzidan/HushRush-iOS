@@ -97,7 +97,7 @@
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xhS-Kw-4Mv"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-oU-BgU">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-oU-BgU">
                                 <rect key="frame" x="137" y="598" width="116" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" name="TextFieldColor"/>
@@ -123,6 +123,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="QS2-Xf-Ilf" id="heq-hk-Fzt"/>
+                        <outlet property="haveTimeButton" destination="k9j-3b-QY8" id="LuS-cn-RY9"/>
+                        <outlet property="inDangerButton" destination="AiT-3l-TKl" id="C0K-p9-Lko"/>
                         <outlet property="pageControl" destination="EZr-oU-BgU" id="Eil-MT-Lze"/>
                         <segue destination="Y6W-OH-hqX" kind="presentation" identifier="goSetUpProfile" modalPresentationStyle="fullScreen" id="EsT-ER-mg2"/>
                         <segue destination="7fD-dd-Jp2" kind="presentation" identifier="goToTabBar" modalPresentationStyle="fullScreen" id="AaG-Yl-OPV"/>
@@ -347,6 +349,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                     <connections>
                         <outlet property="contactsNameField" destination="Lo3-ri-liI" id="hV2-h2-tov"/>
                         <outlet property="contactsNumberField" destination="Amd-7F-V23" id="Na3-NA-y6l"/>
+                        <outlet property="saveButton" destination="J6o-lg-Vn0" id="T4W-dV-sSM"/>
                         <segue destination="Mb9-Ab-ZGR" kind="presentation" identifier="goSetUpPermission" modalPresentationStyle="fullScreen" id="Yj6-MR-MmX"/>
                     </connections>
                 </viewController>
@@ -474,6 +477,9 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <viewLayoutGuide key="safeArea" id="iYN-UP-uxX"/>
                         <color key="backgroundColor" name="Blue"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="EeO-AH-for" id="EEq-37-OkG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3j-XI-qff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
