@@ -31,8 +31,8 @@ class EmergencySingleton {
             player.play()
             
             vibrationTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(startVibration), userInfo: nil, repeats: true)
-            startTorchTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(startTorch), userInfo: nil, repeats: true)
-            stopTorchTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(stopTorch), userInfo: nil, repeats: true)
+            startTorchTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(startTorch), userInfo: nil, repeats: true)
+            stopTorchTimer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(stopTorch), userInfo: nil, repeats: true)
             
 
         } catch let error {
