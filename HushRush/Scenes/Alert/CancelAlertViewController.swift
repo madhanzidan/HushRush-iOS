@@ -19,7 +19,7 @@ class CancelAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cancelTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [self]
+        cancelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self]
             timer in
             print("Timer fired")
            
@@ -35,12 +35,12 @@ class CancelAlertViewController: UIViewController {
         }
         
         setGradientBackground()
-        setButtonShadow()
+        ShadowViewButton.sharedInstance.setButtonShadow(button: cancelButton)
     }
     
     @IBAction func cancelAlert(_ sender: UIButton) {
-        dismiss(animated: true)
         cancelTimer.invalidate()
+        performSegue(withIdentifier: "goToMainPage", sender: self)
     }
     
     func setGradientBackground() {
@@ -54,14 +54,6 @@ class CancelAlertViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
-    }
-    
-    func setButtonShadow() {
-        cancelButton.layer.shadowColor = UIColor.black.cgColor
-        cancelButton.layer.shadowOffset = .zero
-        cancelButton.layer.shadowOpacity = 0.4
-        cancelButton.layer.shadowRadius = 10.0
-        cancelButton.layer.masksToBounds = false
     }
 }
 

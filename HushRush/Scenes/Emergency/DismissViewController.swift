@@ -29,7 +29,7 @@ class DismissViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
-        setButtonShadow(button: closeButton)
+        ShadowViewButton.sharedInstance.setButtonShadow(button: closeButton)
     }
     
     
@@ -50,15 +50,4 @@ class DismissViewController: UIViewController {
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
-    
-    func setButtonShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowOpacity = 0.4
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
-    }
-    
-    
-
 }

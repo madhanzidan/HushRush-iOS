@@ -242,11 +242,12 @@ Sistem Peringatan</string>
                         <outlet property="cancelButton" destination="ntd-cS-NOP" id="GMr-cM-bsC"/>
                         <outlet property="countdownLabel" destination="MSh-BV-ggV" id="hpX-c5-ls1"/>
                         <segue destination="1DY-bV-67w" kind="presentation" identifier="goToEmergency" modalPresentationStyle="fullScreen" id="zsp-eX-aPB"/>
+                        <segue destination="cJi-ss-P2B" kind="presentation" identifier="goToMainPage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="F5i-1w-g0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4is-AM-Y6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041.5384615384614" y="84.597156398104261"/>
+            <point key="canvasLocation" x="1052" y="114"/>
         </scene>
         <!--Emergency-->
         <scene sceneID="rDP-Ri-OCc">
@@ -255,6 +256,14 @@ Sistem Peringatan</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-l8-Aqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1743" y="114"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="Y2a-cM-r6x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="cJi-ss-P2B" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bR2-DI-9Wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="252"/>
         </scene>
     </scenes>
     <resources>
