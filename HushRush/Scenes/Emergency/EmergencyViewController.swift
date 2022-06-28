@@ -11,14 +11,16 @@ import AudioToolbox
 import LocalAuthentication
 import AVFoundation
 
-class EmergencyViewController: UIViewController {
+class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
 
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var previewView: UIView!
     
-    var captureSession: AVCaptureSession!
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
-    var stillImageOutput: AVCapturePhotoOutput!
+    var captureSession = AVCaptureSession()
+    var previewLayer =  AVCaptureVideoPreviewLayer()
+    var movieOutput = AVCaptureMovieFileOutput()
+    var activeInput: AVCaptureDeviceInput!
+    var outputURL: URL!
     
     let masterVolumeSlider: MPVolumeView = MPVolumeView()
     
@@ -34,6 +36,11 @@ class EmergencyViewController: UIViewController {
             print(error)
         }
         
+        if setupSession() {
+            setupPreview()
+            startSession()
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(EmergencyViewController.startCapture), name: .AVCaptureSessionDidStartRunning, object: nil)
         
     }
     
@@ -41,33 +48,6 @@ class EmergencyViewController: UIViewController {
         if let view = masterVolumeSlider.subviews.first as? UISlider{
             view.value = 1.0
         }
-        
-        //MARK: - Camera View
-        captureSession = AVCaptureSession()
-        captureSession.sessionPreset = .medium
-        
-        
-        guard let frontCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
-        else {
-            print("Unable to access back camera!")
-            return
-        }
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: frontCamera)
-            //Step 9
-            stillImageOutput = AVCapturePhotoOutput()
-            
-            if captureSession.canAddInput(input) && captureSession.canAddOutput(stillImageOutput) {
-                captureSession.addInput(input)
-                captureSession.addOutput(stillImageOutput)
-                setupLivePreview()
-            }
-        }
-        catch let error  {
-            print("Error Unable to initialize back camera:  (error.localizedDescription)")
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +73,7 @@ class EmergencyViewController: UIViewController {
                     }
                     //show other screen & success
                     EmergencySingleton.sharedInstance.stopSound()
+                    self?.stopRecording()
                     self?.performSegue(withIdentifier: "goToDismiss", sender: self)
                 }
             }
@@ -103,36 +84,6 @@ class EmergencyViewController: UIViewController {
             present(alert, animated: true)
         }
     }
-    
-    //MARK: - Camera View
-    func setupLivePreview() {
-        
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        
-        videoPreviewLayer.videoGravity = .resizeAspectFill
-        videoPreviewLayer.connection?.videoOrientation = .portrait
-        previewView.layer.addSublayer(videoPreviewLayer)
-        
-        //Step12
-        
-        DispatchQueue.global(qos: .userInitiated).async { //[weak self] in
-            self.captureSession.startRunning()
-            //Step 13
-            
-            DispatchQueue.main.async {
-                self.videoPreviewLayer.frame = self.previewView.bounds
-            }
-        }
-    }
-    
-    func photoOutput( output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-
-            guard let imageData = photo.fileDataRepresentation()
-            else { return }
-
-            let image = UIImage(data: imageData)
-            //captureImageView.image = image
-        }
     
     //MARK: - Function to modify view
     func setGradientBackground() {
@@ -148,5 +99,170 @@ class EmergencyViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
 
+    
+//------------RECORD VIDEO-------------------------
+    func setupPreview() {
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = previewView.bounds
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        previewView.layer.addSublayer(previewLayer)
+    }
+    
+    func setupSession() -> Bool {
+        
+        captureSession.sessionPreset = AVCaptureSession.Preset.high
+        
+        let camera = AVCaptureDevice.default(for: AVMediaType.video)!
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: camera)
+        
+            if captureSession.canAddInput(input) {
+                captureSession.addInput(input)
+                activeInput = input
+            }
+        } catch {
+            print("Error setting device video input: \(error)")
+            return false
+        }
+    
+        // Movie output
+        if captureSession.canAddOutput(movieOutput) {
+            captureSession.addOutput(movieOutput)
+        }
+    
+        return true
+    }
+    func setupCaptureMode(_ mode: Int) {
+        // Video Mode
+    
+    }
+
+    //MARK:- Camera Session
+    func startSession() {
+    
+        if !captureSession.isRunning {
+            videoQueue().async {
+                self.captureSession.startRunning()
+            }
+        }
+    }
+
+    func stopSession() {
+        if captureSession.isRunning {
+            videoQueue().async {
+                self.captureSession.stopRunning()
+            }
+        }
+    }
+
+    func videoQueue() -> DispatchQueue {
+        return DispatchQueue.main
+    }
+
+    func currentVideoOrientation() -> AVCaptureVideoOrientation {
+        var orientation: AVCaptureVideoOrientation
+    
+        switch UIDevice.current.orientation {
+            case .portrait:
+                orientation = AVCaptureVideoOrientation.portrait
+            case .landscapeRight:
+                orientation = AVCaptureVideoOrientation.landscapeLeft
+            case .portraitUpsideDown:
+                orientation = AVCaptureVideoOrientation.portraitUpsideDown
+            default:
+                 orientation = AVCaptureVideoOrientation.landscapeRight
+         }
+    
+         return orientation
+     }
+
+    @objc func startCapture() {
+    
+        startRecording()
+    
+    }
+
+    //EDIT 1: I FORGOT THIS AT FIRST
+
+    func tempURL() -> URL? {
+        let directory = NSTemporaryDirectory() as NSString
+    
+        if directory != "" {
+            let path = directory.appendingPathComponent(NSUUID().uuidString + ".mp4")
+            return URL(fileURLWithPath: path)
+        }
+    
+        return nil
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    
+    }
+
+    func startRecording() {
+    
+        if movieOutput.isRecording == false {
+        
+            let connection = movieOutput.connection(with: AVMediaType.video)
+        
+            if (connection?.isVideoOrientationSupported)! {
+                connection?.videoOrientation = currentVideoOrientation()
+            }
+        
+            if (connection?.isVideoStabilizationSupported)! {
+                connection?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
+            }
+        
+            let device = activeInput.device
+        
+            if (device.isSmoothAutoFocusSupported) {
+            
+                do {
+                    try device.lockForConfiguration()
+                    device.isSmoothAutoFocusEnabled = false
+                    device.unlockForConfiguration()
+                } catch {
+                   print("Error setting configuration: \(error)")
+                }
+            
+            }
+        
+            //EDIT2: And I forgot this
+            outputURL = tempURL()
+            movieOutput.startRecording(to: outputURL, recordingDelegate: self)
+        
+            }
+            else {
+                //stopRecording()
+            }
+    
+       }
+
+   func stopRecording() {
+    
+       if movieOutput.isRecording == true {
+           movieOutput.stopRecording()
+        }
+   }
+
+    func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+    
+    }
+
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+    
+        if (error != nil) {
+        
+            print("Error recording movie: \(error!.localizedDescription)")
+        
+        } else {
+        
+            UISaveVideoAtPathToSavedPhotosAlbum(outputFileURL.path, nil, nil, nil)
+        
+        }
+    
+    }
 }
 
