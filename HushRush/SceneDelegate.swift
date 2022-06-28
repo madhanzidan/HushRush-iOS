@@ -49,19 +49,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _: UIOpenURLContext = urlContexts.first(where: { $0.url.scheme == "widget" }) else { return }
         print("🚀 Launched from widget")
         
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CancelAlertView") as? CancelAlertViewController
-        vc!.modalPresentationStyle = .fullScreen
-        window?.rootViewController?.present(vc!, animated: true, completion: nil)
-        window?.makeKeyAndVisible()
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CancelAlertView") as? CancelAlertViewController
+//        vc!.modalPresentationStyle = .fullScreen
+//        window?.rootViewController?.present(vc!, animated: true, completion: nil)
+//        vc!.navigationController?.pushViewController(vc!, animated: true)
+//        window?.makeKeyAndVisible()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CancelAlertView")
+        self.window?.rootViewController = vc
+        
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _: UIWindowScene = scene as? UIWindowScene else { return }
         maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
+        
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         maybeOpenedFromWidget(urlContexts: URLContexts)
+        
     }
 
 }
