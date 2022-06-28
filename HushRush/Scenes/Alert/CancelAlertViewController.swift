@@ -19,7 +19,7 @@ class CancelAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cancelTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [self]
+        cancelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self]
             timer in
             print("Timer fired")
            

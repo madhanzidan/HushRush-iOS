@@ -35,7 +35,6 @@ class EmergencyViewController: UIViewController {
         }
         
         
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

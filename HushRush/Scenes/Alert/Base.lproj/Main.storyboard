@@ -263,7 +263,7 @@ Sistem Peringatan</string>
                 <viewControllerPlaceholder storyboardName="TabBar" id="cJi-ss-P2B" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bR2-DI-9Wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="239"/>
+            <point key="canvasLocation" x="1592" y="252"/>
         </scene>
     </scenes>
     <resources>
