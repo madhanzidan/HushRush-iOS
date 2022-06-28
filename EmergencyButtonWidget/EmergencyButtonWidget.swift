@@ -12,6 +12,11 @@ let alertURL = URL(string: "emergencyButtonWidget://alert")
 
 struct Provider: TimelineProvider {
     
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> 992821e9d0169e12eba7d7997fd08344d84776bd
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), url: alertURL)
     }
@@ -46,20 +51,31 @@ struct SimpleEntry: TimelineEntry {
 
 struct EmergencyButtonWidgetEntryView : View {
     var entry: Provider.Entry
+
+    private static let deeplinkURL: URL = URL(string: "widget://")!
+    
     @Environment(\.widgetFamily) var widgetFamily
     
     var body: some View {
         ZStack {
             Color("White")
-            Image("EmergencyButtonforWidget")
+            Image("WidgetIcon")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, alignment: .center)
                 .padding(.all)
-            
+                .offset(y: 12)
+                
         }
+<<<<<<< HEAD
         .widgetURL(entry.url)
+=======
+        .widgetURL(EmergencyButtonWidgetEntryView.deeplinkURL)
+        
+>>>>>>> 992821e9d0169e12eba7d7997fd08344d84776bd
     }
 }
+
 
 @main
 struct EmergencyButtonWidget: Widget {

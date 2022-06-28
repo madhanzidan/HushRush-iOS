@@ -8,10 +8,14 @@
 import UIKit
 
 class DismissViewController: UIViewController {
+    
+    
+    @IBOutlet weak var closeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var counter = 3
+        var counter = 10
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
             timer in
             counter -= 1
@@ -25,6 +29,12 @@ class DismissViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
+        setButtonShadow(button: closeButton)
+    }
+    
+    
+    @IBAction func closePressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToTabBar", sender: self)
     }
     
     //MARK: - Function to modify view
@@ -40,5 +50,15 @@ class DismissViewController: UIViewController {
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
+    
+    func setButtonShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = .zero
+        button.layer.shadowOpacity = 0.4
+        button.layer.shadowRadius = 10.0
+        button.layer.masksToBounds = false
+    }
+    
+    
 
 }

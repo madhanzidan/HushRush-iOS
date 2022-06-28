@@ -22,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jef-FB-sF5">
-                                <rect key="frame" x="119" y="687.33333333333337" width="152" height="52"/>
+                                <rect key="frame" x="85" y="688" width="220" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="RkB-71-0ZL"/>
+                                    <constraint firstAttribute="height" constant="52" id="UTx-9v-lLH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="I am safe" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="filled" title="Matikan Alarm" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
                                     <color key="baseForegroundColor" name="DarkBlue"/>
                                     <color key="baseBackgroundColor" name="White"/>
@@ -36,18 +36,19 @@
                                     <action selector="dismissPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CGd-hx-Gew"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-uw-E1L">
-                                <rect key="frame" x="70" y="80" width="250" height="86"/>
-                                <string key="text">Alert System
-Activated</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sistem Kemananan Diaktifkan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-uw-E1L">
+                                <rect key="frame" x="30" y="100" width="330" height="86"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-Ff-0L0">
-                                <rect key="frame" x="50" y="594" width="290" height="68.333333333333371"/>
-                                <string key="text">The alarm has been activated. Your contacts &amp; surroundings
-have been alerted.</string>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmW-wq-mRk">
+                                <rect key="frame" x="83" y="182" width="225" height="399"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm telah dinyalakan. Kontak darurat dan lingkungan sekitar anda telah diperingatkan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-Ff-0L0">
+                                <rect key="frame" x="54" y="589.66666666666663" width="282" height="68.333333333333371"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
@@ -56,19 +57,20 @@ have been alerted.</string>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Red"/>
                         <constraints>
-                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="25" id="03G-7S-05Q"/>
-                            <constraint firstItem="8ew-Ff-0L0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="0M3-tK-U1f"/>
-                            <constraint firstItem="uwb-uw-E1L" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="8MW-YM-ddT"/>
-                            <constraint firstItem="uwb-uw-E1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="MfD-5e-5Cx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jef-FB-sF5" secondAttribute="trailing" constant="119" id="P2d-eg-m6s"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8ew-Ff-0L0" secondAttribute="trailing" constant="50" id="QCV-r2-eJ0"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uwb-uw-E1L" secondAttribute="trailing" constant="70" id="eNO-lp-iK2"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jef-FB-sF5" secondAttribute="bottom" constant="70.666666666666629" id="g9s-k5-jkE"/>
-                            <constraint firstItem="Jef-FB-sF5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="119" id="i9T-Lr-172"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8ew-Ff-0L0" secondAttribute="trailing" constant="54" id="2nf-qf-Krk"/>
+                            <constraint firstItem="8ew-Ff-0L0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="54" id="4Th-mI-fLd"/>
+                            <constraint firstItem="uwb-uw-E1L" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="100" id="8MW-YM-ddT"/>
+                            <constraint firstItem="uwb-uw-E1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="MfD-5e-5Cx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jef-FB-sF5" secondAttribute="trailing" constant="85" id="PNA-3O-pdB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jef-FB-sF5" secondAttribute="bottom" constant="70" id="Xt1-En-4FV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uwb-uw-E1L" secondAttribute="trailing" constant="30" id="eNO-lp-iK2"/>
+                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="30" id="jx7-dL-kah"/>
+                            <constraint firstItem="Jef-FB-sF5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="rK4-rd-Avr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="Jef-FB-sF5" id="MDV-1d-QZl"/>
+                        <outlet property="previewView" destination="lmW-wq-mRk" id="CNB-C8-o5L"/>
                         <segue destination="AKL-Eq-wdQ" kind="presentation" identifier="goToDismiss" modalPresentationStyle="fullScreen" id="KzI-gV-aYE"/>
                     </connections>
                 </viewController>
@@ -86,13 +88,13 @@ have been alerted.</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soz-kL-LMv">
                                 <rect key="frame" x="20" y="605" width="350" height="45.666666666666629"/>
-                                <string key="text">We hope you are safe and sound!
-This page will automatically close.</string>
+                                <string key="text">Kami harap Anda sudah aman .
+Halaman ini akan otomatis tertutup.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert System Deactivated" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-BF-maV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sistem Keamanan Dimatikan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-BF-maV">
                                 <rect key="frame" x="50" y="188" width="298" height="86"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="White"/>
@@ -104,11 +106,28 @@ This page will automatically close.</string>
                                     <constraint firstAttribute="height" constant="249" id="HcB-Lg-v7F"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-0c-6lt">
+                                <rect key="frame" x="142" y="688" width="106" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sS6-yx-1to"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tutup" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="DarkBlue"/>
+                                    <color key="baseBackgroundColor" name="White"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closePressed:" destination="AKL-Eq-wdQ" eventType="touchUpInside" id="z86-6h-FHR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Qh-J3-xWH"/>
                         <color key="backgroundColor" name="Blue"/>
                         <constraints>
+                            <constraint firstItem="0Qh-J3-xWH" firstAttribute="bottom" secondItem="fKC-0c-6lt" secondAttribute="bottom" constant="70" id="0P3-Zv-YJZ"/>
                             <constraint firstItem="Yqg-BF-maV" firstAttribute="leading" secondItem="PTP-na-F7F" secondAttribute="leading" constant="50" id="8WG-l5-VAj"/>
+                            <constraint firstItem="fKC-0c-6lt" firstAttribute="leading" secondItem="0Qh-J3-xWH" secondAttribute="leading" constant="142" id="9fA-S9-lvQ"/>
                             <constraint firstItem="Yqg-BF-maV" firstAttribute="top" secondItem="PTP-na-F7F" secondAttribute="top" constant="188" id="EJl-9E-B2q"/>
                             <constraint firstItem="cJn-fM-pcc" firstAttribute="leading" secondItem="0Qh-J3-xWH" secondAttribute="leading" constant="65" id="JTN-P9-Wj2"/>
                             <constraint firstItem="0Qh-J3-xWH" firstAttribute="trailing" secondItem="Yqg-BF-maV" secondAttribute="trailingMargin" constant="50" id="KZe-Rf-Pnz"/>
@@ -116,10 +135,12 @@ This page will automatically close.</string>
                             <constraint firstItem="soz-kL-LMv" firstAttribute="top" secondItem="cJn-fM-pcc" secondAttribute="bottom" constant="29" id="dMO-70-PAd"/>
                             <constraint firstItem="0Qh-J3-xWH" firstAttribute="trailing" secondItem="soz-kL-LMv" secondAttribute="trailing" constant="20" id="e82-Xd-d9y"/>
                             <constraint firstItem="soz-kL-LMv" firstAttribute="leading" secondItem="0Qh-J3-xWH" secondAttribute="leading" constant="20" id="gZP-se-36x"/>
+                            <constraint firstItem="0Qh-J3-xWH" firstAttribute="trailing" secondItem="fKC-0c-6lt" secondAttribute="trailing" constant="142" id="rg2-BS-XPz"/>
                             <constraint firstItem="cJn-fM-pcc" firstAttribute="top" secondItem="Yqg-BF-maV" secondAttribute="bottom" constant="53" id="yco-FY-1zF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="fKC-0c-6lt" id="rxL-JA-QrQ"/>
                         <segue destination="ET4-Qe-577" kind="presentation" identifier="goToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rmJ-JR-3La"/>
                     </connections>
                 </viewController>
@@ -142,7 +163,7 @@ This page will automatically close.</string>
             <color red="0.21600000560283661" green="0.46700000762939453" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkBlue">
-            <color red="0.0039215686274509803" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0040000001899898052" green="0.10999999940395355" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Red">
             <color red="0.89800000190734863" green="0.28999999165534973" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

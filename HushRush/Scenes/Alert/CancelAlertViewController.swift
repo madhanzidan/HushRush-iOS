@@ -9,37 +9,38 @@ import UIKit
 
 class CancelAlertViewController: UIViewController {
 
-    @IBOutlet weak var CountdownLabel: UILabel!
+    
+    @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
+    
     var cancelTimer = Timer()
+    var counter = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var counter = 3
-        cancelTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        cancelTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [self]
             timer in
             print("Timer fired")
-            self.CountdownLabel.text = "\(counter)"
+           
+            countdownLabel.text = "\(counter)"
             counter -= 1
-            
+
             if counter < 0 {
-                self.CountdownLabel.font = self.CountdownLabel.font.withSize(50)
-                self.CountdownLabel.text = "Success"
+                self.countdownLabel.font = self.countdownLabel.font.withSize(50)
+                self.countdownLabel.text = "Success"
                 timer.invalidate()
                 self.performSegue(withIdentifier: "goToEmergency", sender: self)
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         setGradientBackground()
-        setButtonShadow(button: cancelButton)
+        setButtonShadow()
     }
     
     @IBAction func cancelAlert(_ sender: UIButton) {
-        dismiss(animated: true)
         cancelTimer.invalidate()
+        performSegue(withIdentifier: "goToMainPage", sender: self)
     }
     
     func setGradientBackground() {
@@ -55,12 +56,12 @@ class CancelAlertViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     
-    func setButtonShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowOpacity = 0.4
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
+    func setButtonShadow() {
+        cancelButton.layer.shadowColor = UIColor.black.cgColor
+        cancelButton.layer.shadowOffset = .zero
+        cancelButton.layer.shadowOpacity = 0.4
+        cancelButton.layer.shadowRadius = 10.0
+        cancelButton.layer.masksToBounds = false
     }
 }
 

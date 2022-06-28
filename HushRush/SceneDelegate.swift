@@ -6,10 +6,10 @@
 //
 
 import UIKit
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+<<<<<<< HEAD
     
 //    var view = CancelAlertViewController()
 
@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
     }
+=======
+>>>>>>> 992821e9d0169e12eba7d7997fd08344d84776bd
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -54,6 +56,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //    func widgetURL(_ url: URL?) -> some View  {
 //
 //    }
+
+    
+    
+    //MARK: - Widget Feature
+    private func maybeOpenedFromWidget(urlContexts: Set<UIOpenURLContext>) {
+        guard let _: UIOpenURLContext = urlContexts.first(where: { $0.url.scheme == "widget" }) else { return }
+        print("🚀 Launched from widget")
+        
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CancelAlertView") as? CancelAlertViewController
+//        vc!.modalPresentationStyle = .fullScreen
+//        window?.rootViewController?.present(vc!, animated: true, completion: nil)
+//        vc!.navigationController?.pushViewController(vc!, animated: true)
+//        window?.makeKeyAndVisible()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CancelAlertView")
+        self.window?.rootViewController = vc
+        
+    }
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let _: UIWindowScene = scene as? UIWindowScene else { return }
+        maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
+        
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        maybeOpenedFromWidget(urlContexts: URLContexts)
+        
+    }
 
 }
 
