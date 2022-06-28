@@ -22,7 +22,7 @@ class SetUpEmergencyViewController: UIViewController, CNContactPickerDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setButtonShadow(button: saveButton)
+        ShadowViewButton.sharedInstance.setButtonShadow(button: saveButton)
 
     }
     
@@ -82,14 +82,7 @@ class SetUpEmergencyViewController: UIViewController, CNContactPickerDelegate{
         
         //print(contactNameField)
     }
-    
-    func setButtonShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowOpacity = 0.4
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
-    }
+
 }
 
 

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "HushRush_Icon.png",
+      "filename" : "logo_with_box.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "HushRush_Icon@2x.png",
+      "filename" : "logo_with_box@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "HushRush_Icon@3x.png",
+      "filename" : "logo_with_box@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

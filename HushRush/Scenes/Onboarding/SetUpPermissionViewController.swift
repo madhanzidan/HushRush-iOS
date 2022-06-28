@@ -19,12 +19,11 @@ class SetUpPermissionViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
 
+    
     
     @IBAction func didTapNext(_ sender: Any) {
         cameraPermission()
-        microphonePermission()
         locationPermission()
 
         performSegue(withIdentifier: "goSetUpFinish", sender: self)
@@ -64,38 +63,12 @@ class SetUpPermissionViewController: UIViewController {
             })
         }
     }
-    
-    func microphonePermission() {
-        switch AVAudioSession.sharedInstance().recordPermission {
-        case .granted:
-            print("Permission Granted")
-           
-        
-        case .denied:
-            print("Permission Denied")
-            
-        case .undetermined:
-            print("Request Permission Here")
-            AVAudioSession.sharedInstance().requestRecordPermission ({ granted in
-                
-            })
-        
-        @unknown default:
-            print("Unknown Case")
-        }
-    }
+
     
     func locationPermission() {
         LocationManager.shared.requestLocationAuthorization()
     }
 
-    func setButtonShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowOpacity = 0.4
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
-    }
 
 }
 

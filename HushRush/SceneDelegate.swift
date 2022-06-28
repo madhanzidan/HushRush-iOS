@@ -47,13 +47,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     //MARK: - Widget Feature
     private func maybeOpenedFromWidget(urlContexts: Set<UIOpenURLContext>) {
         guard let _: UIOpenURLContext = urlContexts.first(where: { $0.url.scheme == "widget" }) else { return }
-        print("🚀 Launched from widget")
-        
-//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CancelAlertView") as? CancelAlertViewController
-//        vc!.modalPresentationStyle = .fullScreen
-//        window?.rootViewController?.present(vc!, animated: true, completion: nil)
-//        vc!.navigationController?.pushViewController(vc!, animated: true)
-//        window?.makeKeyAndVisible()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CancelAlertView")

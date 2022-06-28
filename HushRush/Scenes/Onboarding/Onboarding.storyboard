@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q0w-RG-hhq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6D-dg-dLA">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -13,9 +13,6 @@
         <array key="PlusJakartaSans-Bold.ttf">
             <string>PlusJakartaSans-Bold</string>
         </array>
-        <array key="PlusJakartaSans-Medium.ttf">
-            <string>PlusJakartaSans-Medium</string>
-        </array>
         <array key="PlusJakartaSans-Regular.ttf">
             <string>PlusJakartaSans-Regular</string>
         </array>
@@ -24,10 +21,25 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="W5C-Fe-LFt">
+            <objects>
+                <viewController id="H6D-dg-dLA" customClass="LoadingViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tkn-B5-hYD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hq5-em-NNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCu-sJ-1h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1846" y="86"/>
+        </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="d5m-b5-CPi">
             <objects>
-                <viewController id="q0w-RG-hhq" customClass="OnboardingViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="q0w-RG-hhq" customClass="OnboardingViewController" customModule="HushRush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIN-fY-guo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,10 +77,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-nO-Xru">
-                                                    <rect key="frame" x="-10" y="22" width="414" height="320"/>
+                                                    <rect key="frame" x="12" y="22" width="368" height="320"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" name="White"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="548"/>
                                         <connections>
@@ -119,7 +132,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bQG-5f-Ubn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="QS2-Xf-Ilf" id="heq-hk-Fzt"/>
@@ -132,12 +145,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfW-x3-XT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-781" y="84"/>
+            <point key="canvasLocation" x="-781.53846153846155" y="83.886255924170612"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="fqo-cF-n0i">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="7fD-dd-Jp2" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="TabBarViewController" storyboardName="TabBar" id="7fD-dd-Jp2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV2-UZ-1Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-780" y="521"/>
@@ -166,7 +179,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-nZ-OwJ" userLabel="Tuli">
                                 <rect key="frame" x="13" y="499" width="363" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="White"/>
+                                <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -180,21 +193,21 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-U0-K4p" userLabel="Nama">
                                 <rect key="frame" x="15" y="323" width="363" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="White"/>
+                                <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6W6-rZ-4Yl" userLabel="TanggalLahir">
                                 <rect key="frame" x="13" y="411" width="363" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="White"/>
+                                <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-7Y-Gi7" userLabel="Body">
                                 <rect key="frame" x="16" y="198" width="359" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Informasi ini akan membantu proses orang
+                                <string key="text">Informasi ini akan membantu orang
 lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -242,7 +255,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                     </view>
                     <connections>
                         <outlet property="birthDateField" destination="6W6-rZ-4Yl" id="yqZ-dd-NU3"/>
@@ -271,10 +284,9 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <color key="textColor" name="Red"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-wb-r1W">
-                                <rect key="frame" x="15" y="198" width="358" height="92"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nomor ini akan secara otomatis terhubungi ketika sistem keamanan diaktifkan. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-wb-r1W">
+                                <rect key="frame" x="15" y="198" width="358" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Nomor ini akan secara otomatis terhubungi ketika sistem keamanan diaktifkan. Anda dapat menambahkan lebih banyak kontak darurat nanti.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -282,7 +294,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-ri-liI" userLabel="EmergencyContacts">
                                 <rect key="frame" x="16" y="344" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="White"/>
+                                <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -306,7 +318,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-7F-V23" userLabel="PhoneNumber">
                                 <rect key="frame" x="16" y="434" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="White"/>
+                                <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -344,7 +356,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTo-83-vyo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                     </view>
                     <connections>
                         <outlet property="contactsNameField" destination="Lo3-ri-liI" id="hV2-h2-tov"/>
@@ -355,7 +367,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJi-Nb-VDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.62318840579712" y="83.705357142857139"/>
+            <point key="canvasLocation" x="852.30769230769226" y="83.175355450236964"/>
         </scene>
         <!--Set Up Permission View Controller-->
         <scene sceneID="kOp-pI-b1x">
@@ -370,13 +382,6 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="Red"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi Kamera Mikrofon Foto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odx-P0-ueP">
-                                <rect key="frame" x="152" y="525" width="86" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIH-ep-UeT">
@@ -408,19 +413,23 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <rect key="frame" x="36" y="686" width="154" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Keterangan" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Tidak Mengerti?" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="16"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" name="White"/>
+                                    <color key="baseBackgroundColor" name="textField"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapDesc:" destination="Mb9-Ab-ZGR" eventType="touchUpInside" id="hct-4q-2bO"/>
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qJg-xq-fcV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="permissionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-EQ-uIM">
+                                <rect key="frame" x="127" y="525" width="122" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hSB-Qn-9qk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                     </view>
                     <connections>
                         <segue destination="HjL-gd-V5M" kind="presentation" identifier="goDescription" id="m5D-gY-8Bl"/>
@@ -439,7 +448,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harap luangkan ruang pada penyimpanan iCloud anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZy-kz-oAk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harap menyiapkan ruang penyimpanan pada IPhone anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZy-kz-oAk">
                                 <rect key="frame" x="16" y="114" width="358" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
@@ -449,7 +458,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-zf-i3v">
                                 <rect key="frame" x="16" y="560" width="358" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Kami akan menyimpan video di aplikasi Photos lokal anda. Dengan meluangkan ruang penyimpanan iCloud anda, video bukti yang terekam dapat tersimpan dengan lebih aman.</string>
+                                <string key="text">HushRush akan menyimpan video di aplikasi Photos lokal Anda. Dengan meluangkan ruang penyimpanan, video bukti yang terekam dapat tersimpan dengan lebih aman.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
@@ -539,7 +548,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kami akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-1u-NdJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-1u-NdJ">
                                 <rect key="frame" x="16" y="128" width="355" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
@@ -547,13 +556,13 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush akan merekam video secara otomatis yang dapat anda gunakan sebagai barang bukti ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-oz-Jc9">
-                                <rect key="frame" x="16" y="266" width="355" height="92"/>
+                                <rect key="frame" x="16" y="257" width="355" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kami menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32w-U6-QjN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32w-U6-QjN">
                                 <rect key="frame" x="16" y="394" width="348" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
@@ -578,6 +587,7 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
     </scenes>
     <resources>
         <image name="Permission" width="166.66667175292969" height="167.33332824707031"/>
+        <image name="permissionIcon" width="650.66668701171875" height="448"/>
         <image name="setupFinish" width="124.66666412353516" height="166"/>
         <namedColor name="Blue">
             <color red="0.21600000560283661" green="0.46700000762939453" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -593,6 +603,9 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
         </namedColor>
         <namedColor name="White">
             <color red="0.9570000171661377" green="0.9570000171661377" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textField">
+            <color red="0.90588235294117647" green="0.90588235294117647" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

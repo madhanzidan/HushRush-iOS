@@ -17,6 +17,9 @@
 		4E830740286AC692007FCB22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83073A286AC692007FCB22 /* ProfileViewController.swift */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
+		936E7347286B386F00C3CD20 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E7346286B386F00C3CD20 /* NavigationManager.swift */; };
+		936E7349286B39F600C3CD20 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E7348286B39F600C3CD20 /* StorageManager.swift */; };
+		93E6799F286B342400776E7F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6799E286B342400776E7F /* LoadingViewController.swift */; };
 		A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
@@ -96,6 +99,9 @@
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		936E7346286B386F00C3CD20 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		936E7348286B39F600C3CD20 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		93E6799E286B342400776E7F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FB81C2855E2230044A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 				4E897D562858534600B64A35 /* EmergencySingleton.swift */,
 				A8D605D52865AE130070D4EF /* OnboardingSlide.swift */,
 				A8E4B862286AD4600055AF6B /* ShadowViewButton.swift */,
+				936E7346286B386F00C3CD20 /* NavigationManager.swift */,
+				936E7348286B39F600C3CD20 /* StorageManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 				A8D605CC2865ADE10070D4EF /* SetUpPermissionViewController.swift */,
 				A8D605CD2865ADE10070D4EF /* SetUpProfileViewController.swift */,
 				A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */,
+				93E6799E286B342400776E7F /* LoadingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -548,15 +557,18 @@
 				A8D605D32865ADE10070D4EF /* SetUpProfileViewController.swift in Sources */,
 				A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */,
 				4E83073F286AC692007FCB22 /* ProfileViewController.swift in Sources */,
+				936E7347286B386F00C3CD20 /* NavigationManager.swift in Sources */,
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
 				A8D605CF2865ADE10070D4EF /* OnboardingViewController.swift in Sources */,
 				A82FB8272855E2230044A5D6 /* HushRush.xcdatamodeld in Sources */,
+				93E6799F286B342400776E7F /* LoadingViewController.swift in Sources */,
 				A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */,
 				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
 				A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
 				A8D605D22865ADE10070D4EF /* SetUpPermissionViewController.swift in Sources */,
 				A8D605D82865B3B90070D4EF /* SetUpFinishViewController.swift in Sources */,
+				936E7349286B39F600C3CD20 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,13 +741,12 @@
 				INFOPLIST_FILE = HushRush/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "HushRush akan merekam video secara otomatis yang dapat anda gunakan sebagai barang bukti ketika sistem keamanan diaktifkan.";
 				INFOPLIST_KEY_NSContactsUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -771,13 +782,12 @@
 				INFOPLIST_FILE = HushRush/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "HushRush akan merekam video secara otomatis yang dapat anda gunakan sebagai barang bukti ketika sistem keamanan diaktifkan.";
 				INFOPLIST_KEY_NSContactsUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
