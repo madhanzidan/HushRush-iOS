@@ -39,8 +39,8 @@ class CancelAlertViewController: UIViewController {
     }
     
     @IBAction func cancelAlert(_ sender: UIButton) {
-        dismiss(animated: true)
         cancelTimer.invalidate()
+        performSegue(withIdentifier: "goToMainPage", sender: self)
     }
     
     func setGradientBackground() {
