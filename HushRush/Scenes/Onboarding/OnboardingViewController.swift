@@ -17,12 +17,16 @@ class OnboardingViewController: UIViewController {
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0
+    
+    private let storageManager = StoragManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateFlag()
+        
         slides = [
-            OnboardingSlide(title: "Selamat datang di HushRush!", description: "HushRush adalah kata yang diambil dari Bahasa Inggris. Hush yang artinya sunyi, dan rush yang artinya bergegas.", image: #imageLiteral(resourceName: "firstOnboarding")),
+            OnboardingSlide(title: "Selamat datang di HushRush!", description: "HushRush adalah kata yang diambil dari Bahasa Inggris. Hush yang artinya sunyi, dan rush yang artinya bergegas.", image: #imageLiteral(resourceName: "IconView")),
             OnboardingSlide(title: "Pendamping Anda dalam darurat", description: "Aplikasi pendamping pribadi anda ketika anda berada di kondisi darurat, dibuat khusus untuk penyandang tuli.", image: #imageLiteral(resourceName: "firstOnboarding")),
             OnboardingSlide(title: "Penyelamat Instan untuk Anda", description: "Hanya dengan satu sentuhan tombol, HushRush akan membunyikan alarm keras, merekam video sebagai bukti, dan mengirimkan lokasi anda ke kontak darurat.", image: #imageLiteral(resourceName: "secondOnboarding")),
             OnboardingSlide(title: "Sistem Keamanan Anti-tipu", description: "Kami menggunakan PIN untuk menonaktifkan alarm untuk memastikan bahwa itu benar-benar anda.", image: #imageLiteral(resourceName: "thirdOnboarding"))
@@ -32,8 +36,8 @@ class OnboardingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setButtonShadow(button: haveTimeButton)
-        setButtonShadow(button: inDangerButton)
+        ShadowViewButton.sharedInstance.setButtonShadow(button: haveTimeButton)
+        ShadowViewButton.sharedInstance.setButtonShadow(button: inDangerButton)
 
     }
     
@@ -46,12 +50,21 @@ class OnboardingViewController: UIViewController {
         performSegue(withIdentifier: "goToTabBar", sender: self)
     }
     
-    func setButtonShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowOpacity = 0.4
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
+    func updateFlag() {
+        storageManager.setOnboardingSeen()
+    }
+    
+    private func showMainApp() {
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+        }
+        
     }
     
 }
@@ -79,6 +92,8 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         pageControl.currentPage = currentPage
     }
     
-    
+    func didTapExploreButton() {
+        showMainApp()
+    }
     
 }
