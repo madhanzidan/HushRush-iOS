@@ -11,16 +11,16 @@
 		4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */; };
 		4E83073B286AC692007FCB22 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E830738286AC692007FCB22 /* EmergencyContactViewController.swift */; };
 		4E83073C286AC692007FCB22 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E830738286AC692007FCB22 /* EmergencyContactViewController.swift */; };
-		4E83073D286AC692007FCB22 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E830739286AC692007FCB22 /* Profile.storyboard */; };
-		4E83073E286AC692007FCB22 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E830739286AC692007FCB22 /* Profile.storyboard */; };
-		4E83073F286AC692007FCB22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83073A286AC692007FCB22 /* ProfileViewController.swift */; };
-		4E830740286AC692007FCB22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83073A286AC692007FCB22 /* ProfileViewController.swift */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
 		936E7347286B386F00C3CD20 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E7346286B386F00C3CD20 /* NavigationManager.swift */; };
 		936E7349286B39F600C3CD20 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E7348286B39F600C3CD20 /* StorageManager.swift */; };
 		93E6799F286B342400776E7F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6799E286B342400776E7F /* LoadingViewController.swift */; };
 		A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */; };
+		A82F0AD0286B57CA00764CC0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82F0ACC286B57CA00764CC0 /* Profile.storyboard */; };
+		A82F0AD1286B57CA00764CC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F0ACD286B57CA00764CC0 /* ProfileViewController.swift */; };
+		A82F0AD2286B57CA00764CC0 /* ChangeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F0ACE286B57CA00764CC0 /* ChangeProfileViewController.swift */; };
+		A82F0AD3286B57CA00764CC0 /* ContactImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F0ACF286B57CA00764CC0 /* ContactImportViewController.swift */; };
 		A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81C2855E2230044A5D6 /* AppDelegate.swift */; };
 		A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */; };
 		A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FB8202855E2230044A5D6 /* AlertViewController.swift */; };
@@ -94,8 +94,6 @@
 		3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyButtonWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4E830738286AC692007FCB22 /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
-		4E830739286AC692007FCB22 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		4E83073A286AC692007FCB22 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +101,10 @@
 		936E7348286B39F600C3CD20 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		93E6799E286B342400776E7F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A82B3AEA2861B21900B1B063 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A82F0ACC286B57CA00764CC0 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = "../../../../../../../Downloads/HushRush-iOS SHERAAAA/HushRush/Scenes/Profile/Profile.storyboard"; sourceTree = "<group>"; };
+		A82F0ACD286B57CA00764CC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../../../../../Downloads/HushRush-iOS SHERAAAA/HushRush/Scenes/Profile/ProfileViewController.swift"; sourceTree = "<group>"; };
+		A82F0ACE286B57CA00764CC0 /* ChangeProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewController.swift; sourceTree = "<group>"; };
+		A82F0ACF286B57CA00764CC0 /* ContactImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactImportViewController.swift; sourceTree = "<group>"; };
 		A82FB8192855E2230044A5D6 /* HushRush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushRush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FB81C2855E2230044A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82FB81E2855E2230044A5D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,9 +289,11 @@
 		A82FB8562855E9430044A5D6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A82F0ACE286B57CA00764CC0 /* ChangeProfileViewController.swift */,
+				A82F0ACF286B57CA00764CC0 /* ContactImportViewController.swift */,
+				A82F0ACC286B57CA00764CC0 /* Profile.storyboard */,
+				A82F0ACD286B57CA00764CC0 /* ProfileViewController.swift */,
 				4E830738286AC692007FCB22 /* EmergencyContactViewController.swift */,
-				4E83073A286AC692007FCB22 /* ProfileViewController.swift */,
-				4E830739286AC692007FCB22 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -448,12 +452,12 @@
 				A83054C9285980DA005574E5 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
 				A83054CC285980DA005574E5 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
 				A83054D3285980DA005574E5 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				A82F0AD0286B57CA00764CC0 /* Profile.storyboard in Resources */,
 				A83054CD285980DA005574E5 /* PlusJakartaSans-Italic.ttf in Resources */,
 				A83054C7285980DA005574E5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				A83054D1285980DA005574E5 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
 				A8D605D02865ADE10070D4EF /* Onboarding.storyboard in Resources */,
 				A83054CF285980DA005574E5 /* PlusJakartaSans-Bold.ttf in Resources */,
-				4E83073D286AC692007FCB22 /* Profile.storyboard in Resources */,
 				A83054D0285980DA005574E5 /* PlusJakartaSans-Light.ttf in Resources */,
 				A83054C6285980DA005574E5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				A83054C8285980DA005574E5 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
@@ -470,7 +474,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E83073E286AC692007FCB22 /* Profile.storyboard in Resources */,
 				A8FB6556285E1C5300AB4028 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,13 +553,15 @@
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A8E4B863286AD4600055AF6B /* ShadowViewButton.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				A82F0AD3286B57CA00764CC0 /* ContactImportViewController.swift in Sources */,
 				4E83073B286AC692007FCB22 /* EmergencyContactViewController.swift in Sources */,
+				A82F0AD2286B57CA00764CC0 /* ChangeProfileViewController.swift in Sources */,
 				A8D605D42865ADE10070D4EF /* OnboardingCollectionViewCell.swift in Sources */,
+				A82F0AD1286B57CA00764CC0 /* ProfileViewController.swift in Sources */,
 				A82FB86228560D780044A5D6 /* EmergencyViewController.swift in Sources */,
 				A82FB81D2855E2230044A5D6 /* AppDelegate.swift in Sources */,
 				A8D605D32865ADE10070D4EF /* SetUpProfileViewController.swift in Sources */,
 				A82FB81F2855E2230044A5D6 /* SceneDelegate.swift in Sources */,
-				4E83073F286AC692007FCB22 /* ProfileViewController.swift in Sources */,
 				936E7347286B386F00C3CD20 /* NavigationManager.swift in Sources */,
 				4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */,
 				A8D605CF2865ADE10070D4EF /* OnboardingViewController.swift in Sources */,
@@ -576,7 +581,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E830740286AC692007FCB22 /* ProfileViewController.swift in Sources */,
 				A8FB6554285E1C5300AB4028 /* EmergencyButtonWidget.swift in Sources */,
 				4E83073C286AC692007FCB22 /* EmergencyContactViewController.swift in Sources */,
 			);
