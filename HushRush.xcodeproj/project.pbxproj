@@ -53,6 +53,7 @@
 		A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605D52865AE130070D4EF /* OnboardingSlide.swift */; };
 		A8D605D82865B3B90070D4EF /* SetUpFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */; };
 		A8D605DA2865BF790070D4EF /* siren_final.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8D605D92865BF790070D4EF /* siren_final.mp3 */; };
+		A8E4B863286AD4600055AF6B /* ShadowViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4B862286AD4600055AF6B /* ShadowViewButton.swift */; };
 		A8FB654F285E1C5300AB4028 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB654E285E1C5300AB4028 /* WidgetKit.framework */; };
 		A8FB6551285E1C5300AB4028 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FB6550285E1C5300AB4028 /* SwiftUI.framework */; };
 		A8FB6554285E1C5300AB4028 /* EmergencyButtonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6553285E1C5300AB4028 /* EmergencyButtonWidget.swift */; };
@@ -133,6 +134,7 @@
 		A8D605D52865AE130070D4EF /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		A8D605D72865B3B90070D4EF /* SetUpFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFinishViewController.swift; sourceTree = "<group>"; };
 		A8D605D92865BF790070D4EF /* siren_final.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren_final.mp3; sourceTree = "<group>"; };
+		A8E4B862286AD4600055AF6B /* ShadowViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewButton.swift; sourceTree = "<group>"; };
 		A8FB654C285E1C5300AB4028 /* EmergencyButtonWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmergencyButtonWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FB654E285E1C5300AB4028 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A8FB6550285E1C5300AB4028 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -246,6 +248,7 @@
 			children = (
 				4E897D562858534600B64A35 /* EmergencySingleton.swift */,
 				A8D605D52865AE130070D4EF /* OnboardingSlide.swift */,
+				A8E4B862286AD4600055AF6B /* ShadowViewButton.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			files = (
 				A8D605D12865ADE10070D4EF /* SetUpEmergencyViewController.swift in Sources */,
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
+				A8E4B863286AD4600055AF6B /* ShadowViewButton.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
 				4E83073B286AC692007FCB22 /* EmergencyContactViewController.swift in Sources */,
 				A8D605D42865ADE10070D4EF /* OnboardingCollectionViewCell.swift in Sources */,
