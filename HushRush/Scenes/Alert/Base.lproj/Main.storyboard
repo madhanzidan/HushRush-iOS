@@ -25,14 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan tombol di bawah" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UV-EF-Fn1">
-                                <rect key="frame" x="20" y="234" width="350" height="25.333333333333314"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
-                                <color key="textColor" red="0.0039215686274509803" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merasa tidak aman?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-5p-b7L">
-                                <rect key="frame" x="20" y="186" width="350" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan dalam bahaya!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-5p-b7L">
+                                <rect key="frame" x="20" y="210" width="350" height="43"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" red="0.89803921568627454" green="0.29019607843137252" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sistem peringatan akan diaktifkan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-B8-eR8">
-                                <rect key="frame" x="20" y="695.66666666666663" width="350" height="25.333333333333371"/>
+                                <rect key="frame" x="20" y="655.66666666666663" width="350" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="20"/>
                                 <color key="textColor" red="0.0039215686269999999" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,21 +66,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="White"/>
                         <constraints>
+                            <constraint firstItem="qAC-eZ-JYU" firstAttribute="top" secondItem="BGU-5p-b7L" secondAttribute="bottom" constant="51.333333333333258" id="7Qd-mg-Kp1"/>
                             <constraint firstItem="2Uc-B8-eR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CW6-Hk-w1y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qAC-eZ-JYU" secondAttribute="trailing" constant="20" id="EFz-Ej-baf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Uc-B8-eR8" secondAttribute="bottom" constant="40" id="Jgb-pX-t4R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Uc-B8-eR8" secondAttribute="bottom" constant="80" id="Jgb-pX-t4R"/>
                             <constraint firstItem="qAC-eZ-JYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jii-cq-TiK"/>
                             <constraint firstItem="BGU-5p-b7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kd9-5y-gwl"/>
                             <constraint firstItem="bR5-EC-IUY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="O7M-Dr-d25"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bR5-EC-IUY" secondAttribute="trailing" constant="16" id="Oqp-No-2Wq"/>
-                            <constraint firstItem="3UV-EF-Fn1" firstAttribute="top" secondItem="BGU-5p-b7L" secondAttribute="bottom" constant="5" id="Tgp-cm-Fb2"/>
                             <constraint firstItem="bR5-EC-IUY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="Wwt-qw-edR"/>
-                            <constraint firstItem="BGU-5p-b7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="186" id="XF0-Bo-E5N"/>
-                            <constraint firstItem="3UV-EF-Fn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eZt-jV-fOX"/>
+                            <constraint firstItem="BGU-5p-b7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="210" id="XF0-Bo-E5N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGU-5p-b7L" secondAttribute="trailing" constant="20" id="iP6-z9-Mqo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Uc-B8-eR8" secondAttribute="trailing" constant="20" id="muA-Qx-ENI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3UV-EF-Fn1" secondAttribute="trailing" constant="20" id="oCz-ab-V9g"/>
-                            <constraint firstItem="qAC-eZ-JYU" firstAttribute="top" secondItem="3UV-EF-Fn1" secondAttribute="bottom" constant="45" id="uZD-ut-qVf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alert" image="bell.fill" catalog="system" id="AMH-9K-wnC"/>

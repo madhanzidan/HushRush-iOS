@@ -47,6 +47,7 @@
 		A83054DD285985EB005574E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83054DC285985EB005574E5 /* TabBarViewController.swift */; };
 		A83054DF285985F8005574E5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83054DE285985F8005574E5 /* TabBar.storyboard */; };
 		A896280C2869C1560058BB7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82FB8282855E2240044A5D6 /* Assets.xcassets */; };
+		A8985517286C597200921909 /* ProfileUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8985516286C597200921909 /* ProfileUserDefaults.swift */; };
 		A8D605CF2865ADE10070D4EF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605C92865ADE10070D4EF /* OnboardingViewController.swift */; };
 		A8D605D02865ADE10070D4EF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D605CA2865ADE10070D4EF /* Onboarding.storyboard */; };
 		A8D605D12865ADE10070D4EF /* SetUpEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605CB2865ADE10070D4EF /* SetUpEmergencyViewController.swift */; };
@@ -133,6 +134,7 @@
 		A83054C5285980DA005574E5 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-SemiBold.ttf"; path = "Themes/Fonts/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A83054DC285985EB005574E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A83054DE285985F8005574E5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		A8985516286C597200921909 /* ProfileUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserDefaults.swift; sourceTree = "<group>"; };
 		A8D605C92865ADE10070D4EF /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A8D605CA2865ADE10070D4EF /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A8D605CB2865ADE10070D4EF /* SetUpEmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpEmergencyViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				A82FB8522855E88C0044A5D6 /* Model */,
 				A82FB8332855E5AE0044A5D6 /* Themes */,
 				A82FB8532855E8AA0044A5D6 /* Scenes */,
+				A8985515286C592000921909 /* Utilities */,
 				A82FB8282855E2240044A5D6 /* Assets.xcassets */,
 				A82FB82A2855E2240044A5D6 /* LaunchScreen.storyboard */,
 				A82FB82D2855E2240044A5D6 /* Info.plist */,
@@ -291,9 +294,9 @@
 			children = (
 				A82F0ACE286B57CA00764CC0 /* ChangeProfileViewController.swift */,
 				A82F0ACF286B57CA00764CC0 /* ContactImportViewController.swift */,
-				A82F0ACC286B57CA00764CC0 /* Profile.storyboard */,
 				A82F0ACD286B57CA00764CC0 /* ProfileViewController.swift */,
 				4E830738286AC692007FCB22 /* EmergencyContactViewController.swift */,
+				A82F0ACC286B57CA00764CC0 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -323,6 +326,14 @@
 				A83054DE285985F8005574E5 /* TabBar.storyboard */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A8985515286C592000921909 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A8985516286C597200921909 /* ProfileUserDefaults.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A8D605C82865ADB90070D4EF /* Onboarding */ = {
@@ -571,6 +582,7 @@
 				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
 				A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
+				A8985517286C597200921909 /* ProfileUserDefaults.swift in Sources */,
 				A8D605D22865ADE10070D4EF /* SetUpPermissionViewController.swift in Sources */,
 				A8D605D82865B3B90070D4EF /* SetUpFinishViewController.swift in Sources */,
 				936E7349286B39F600C3CD20 /* StorageManager.swift in Sources */,
