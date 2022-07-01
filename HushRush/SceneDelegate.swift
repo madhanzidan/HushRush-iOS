@@ -51,18 +51,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CancelAlertView")
         self.window?.rootViewController = vc
-        
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _: UIWindowScene = scene as? UIWindowScene else { return }
         maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
-        
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         maybeOpenedFromWidget(urlContexts: URLContexts)
-        
     }
 
 }
