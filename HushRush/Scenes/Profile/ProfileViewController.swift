@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         ProfilePicture.image = ProfileUserDefaults.shared.profileImageSet ? UIImage(data: ProfileUserDefaults.shared.pic as Data) : image
         pic = image.jpegData(compressionQuality: 0.5)! as NSData
-        //ProfileUserDefaults.shared.pic = pic!
         ProfilePicture.image = imageSet
     }
     

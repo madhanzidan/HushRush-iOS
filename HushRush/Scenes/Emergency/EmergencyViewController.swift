@@ -53,6 +53,12 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
     override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
         ShadowViewButton.sharedInstance.setButtonShadow(button: dismissButton)
+        previewView.layer.cornerRadius = 28.0
+        previewView.layer.masksToBounds = true
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        previewLayer.frame = previewView.layer.bounds
+        previewView.layer.addSublayer(previewLayer)
+        
     }
     
     
