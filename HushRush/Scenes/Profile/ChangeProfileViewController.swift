@@ -8,63 +8,54 @@
 import UIKit
 
 class ChangeProfileViewController: UIViewController {
-    @IBOutlet weak var InputName: UITextField!
-    @IBOutlet weak var InputDate: UIDatePicker!
-    @IBOutlet weak var InputDeafnessStatus: UIButton!
+    
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var birthdatePicker: UIButton!
+    @IBOutlet weak var birthdateDisplay: UITextField!
+    @IBOutlet weak var deafnessStatusInput: UITextField!
     
     var name: String? = UserDefaults.standard.string(forKey: "NAME")
     var birthday: String? = UserDefaults.standard.string(forKey: "DATE")
-    var isDeaf: Bool? = UserDefaults.standard.bool(forKey: "DEAF")
+    var deafStatus: String? = UserDefaults.standard.string(forKey: "DEAF")
+    
+    let status = [" ", "Tuli", "Tunarungu"]
+    let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPopupButton()
         
-        InputName.returnKeyType = .done
-        InputName.autocapitalizationType = .words
-        InputName.autocorrectionType = .no
-        InputName.becomeFirstResponder()
-        InputName.delegate = self
+        hideKeyboardWhenTappedAround()
         
+        nameInput.returnKeyType = .done
+        nameInput.autocapitalizationType = .words
+        nameInput.autocorrectionType = .no
+        nameInput.becomeFirstResponder()
+        nameInput.delegate = self
         
+        deafPicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if name != nil {
-            return InputName.text = name
+            return nameInput.text = name
         }
     }
     
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        UserDefaults.standard.set(formatter.string(from: sender.date), forKey: "DATE")
+    @IBAction func birthdateButtonTapped(_ sender: UIButton) {
     }
     
-    func setPopupButton() {
-        let optionClosure = {(action: UIAction) in
-            print(action.title)
-            if action.title == "Ya" {
-                UserDefaults.standard.set(true, forKey: "DEAF")
-            } else {
-                UserDefaults.standard.set(false, forKey: "DEAF")
-            }
-        }
+    func deafPicker() {
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
-        InputDeafnessStatus.menu = UIMenu(children: [
-            UIAction(title: "Ya", state: .on, handler: optionClosure),
-            UIAction(title: "Tidak", handler: optionClosure)
-        ])
-        
-        InputDeafnessStatus.showsMenuAsPrimaryAction = true
-        InputDeafnessStatus.changesSelectionAsPrimaryAction = true
+        deafnessStatusInput.inputView = pickerView
     }
     
     @IBAction func saveButton() {
-        InputName.resignFirstResponder()
+        nameInput.resignFirstResponder()
         
-        if InputName.text?.isEmpty == false {
-            UserDefaults.standard.set(InputName.text, forKey: "NAME")
+        if nameInput.text?.isEmpty == false {
+            UserDefaults.standard.set(nameInput.text, forKey: "NAME")
         }
         
         self.navigationController!.popToRootViewController(animated: true)
@@ -72,7 +63,25 @@ class ChangeProfileViewController: UIViewController {
     
 }
 
-extension ChangeProfileViewController: UITextFieldDelegate {
+extension ChangeProfileViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return status.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return status[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        deafnessStatusInput.text = status[row]
+        UserDefaults.standard.set(deafnessStatusInput.text, forKey: "DEAF")
+        print(deafStatus!)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
@@ -81,5 +90,17 @@ extension ChangeProfileViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+}
+
+extension ChangeProfileViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SetUpProfileViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
