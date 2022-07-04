@@ -10,8 +10,7 @@ import UIKit
 class ChangeProfileViewController: UIViewController {
     
     @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var birthdatePicker: UIButton!
-    @IBOutlet weak var birthdateDisplay: UITextField!
+    @IBOutlet weak var birthdateInput: UITextField!
     @IBOutlet weak var deafnessStatusInput: UITextField!
     
     var name: String? = UserDefaults.standard.string(forKey: "NAME")
@@ -33,6 +32,7 @@ class ChangeProfileViewController: UIViewController {
         nameInput.delegate = self
         
         deafPicker()
+        birthdatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +41,28 @@ class ChangeProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func birthdateButtonTapped(_ sender: UIButton) {
+    func birthdatePicker() {
+        if birthday != nil {
+            birthdateInput.text = birthday
+        }
+        
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(dateChanged(datePicker:)), for: UIControl.Event.valueChanged)
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.frame.size = CGSize(width: 0, height: 300)
+        birthdateInput.inputView = datePicker
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        birthdateInput.text = formatDate(date: datePicker.date)
+        UserDefaults.standard.set(birthdateInput.text, forKey: "DATE")
+    }
+    
+    func formatDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter.string(from: date)
     }
     
     func deafPicker() {

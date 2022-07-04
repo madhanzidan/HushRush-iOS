@@ -268,10 +268,10 @@
                                 <rect key="frame" x="16" y="257" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-af-smT">
-                                <rect key="frame" x="16" y="257" width="358" height="34"/>
+                                <rect key="frame" x="328" y="257" width="46" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -283,9 +283,6 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="birthdateButtonTapped:" destination="15P-BV-FZz" eventType="touchUpInside" id="FzS-TM-eoT"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tuli" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Yxa-ho-fQ0">
                                 <rect key="frame" x="16" y="362" width="358" height="34"/>
@@ -303,8 +300,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="birthdateDisplay" destination="9xg-Nd-mN3" id="Ni9-Rz-TCQ"/>
-                        <outlet property="birthdatePicker" destination="cwo-af-smT" id="8xY-Au-qV9"/>
+                        <outlet property="birthdateInput" destination="9xg-Nd-mN3" id="c7z-d5-8HX"/>
                         <outlet property="deafnessStatusInput" destination="Yxa-ho-fQ0" id="0sL-gS-rsp"/>
                         <outlet property="nameInput" destination="Y1i-As-C5L" id="SsG-6E-s5L"/>
                     </connections>
