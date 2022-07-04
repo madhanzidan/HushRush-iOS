@@ -98,9 +98,9 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
-
     
-//------------RECORD VIDEO-------------------------
+    //MARK: - Record Video
+    
     func setupPreview() {
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = previewView.bounds
@@ -183,7 +183,6 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
     
     }
 
-    //EDIT 1: I FORGOT THIS AT FIRST
 
     func tempURL() -> URL? {
         let directory = NSTemporaryDirectory() as NSString
@@ -202,7 +201,6 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
     }
 
     func startRecording() {
-    
         if movieOutput.isRecording == false {
         
             let connection = movieOutput.connection(with: AVMediaType.video)
@@ -226,18 +224,15 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
                 } catch {
                    print("Error setting configuration: \(error)")
                 }
-            
             }
         
-            //EDIT2: And I forgot this
             outputURL = tempURL()
             movieOutput.startRecording(to: outputURL, recordingDelegate: self)
         
             }
             else {
-                //stopRecording()
+                
             }
-    
        }
 
    func stopRecording() {
@@ -248,21 +243,17 @@ class EmergencyViewController: UIViewController, AVCaptureFileOutputRecordingDel
    }
 
     func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
-    
     }
 
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
     
         if (error != nil) {
-        
             print("Error recording movie: \(error!.localizedDescription)")
         
         } else {
-        
             UISaveVideoAtPathToSavedPhotosAlbum(outputFileURL.path, nil, nil, nil)
         
         }
-    
     }
 }
 
