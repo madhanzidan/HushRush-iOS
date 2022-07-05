@@ -8,63 +8,68 @@
 import UIKit
 
 class ChangeProfileViewController: UIViewController {
-    @IBOutlet weak var InputName: UITextField!
-    @IBOutlet weak var InputDate: UIDatePicker!
-    @IBOutlet weak var InputDeafnessStatus: UIButton!
+    
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var birthdateInput: UITextField!
+    @IBOutlet weak var deafnessStatusInput: UITextField!
     
     var name: String? = UserDefaults.standard.string(forKey: "NAME")
     var birthday: String? = UserDefaults.standard.string(forKey: "DATE")
-    var isDeaf: Bool? = UserDefaults.standard.bool(forKey: "DEAF")
+    var deafStatus: String? = UserDefaults.standard.string(forKey: "DEAF")
+    
+    var updatedBirthdate: String?
+    var updatedDeafnessStatus: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPopupButton()
-        
-        InputName.returnKeyType = .done
-        InputName.autocapitalizationType = .words
-        InputName.autocorrectionType = .no
-        InputName.becomeFirstResponder()
-        InputName.delegate = self
-        
-        
+
+        nameInputStyling()
+        birtdateReload()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if name != nil {
-            return InputName.text = name
+    func nameInputStyling() {
+        nameInput.returnKeyType = .done
+        nameInput.autocapitalizationType = .words
+        nameInput.autocorrectionType = .no
+        nameInput.becomeFirstResponder()
+        nameInput.delegate = self
+    }
+    
+    @IBAction func birthdayButtonTapped(_ sender: Any) {
+        let controller = storyboard!.instantiateViewController(withIdentifier: "BirthdateModal") as! BirthdateModalViewController
+        controller.completionHandler = {
+            text in
+            self.birthdateInput.text = text
+        }
+        present(controller, animated: true)
+    }
+    
+    func birtdateReload() {
+        if updatedBirthdate != nil {
+            birthdateInput.text = updatedBirthdate
         }
     }
     
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        UserDefaults.standard.set(formatter.string(from: sender.date), forKey: "DATE")
+    @IBAction func deafTapped(_ sender: UIButton) {
+        let controller = storyboard!.instantiateViewController(withIdentifier: "DeafPick") as! DeafPickViewController
+        controller.completionHandler = {
+            text in
+            self.deafnessStatusInput.text = text
+        }
+        present(controller, animated: true)
     }
     
-    func setPopupButton() {
-        let optionClosure = {(action: UIAction) in
-            print(action.title)
-            if action.title == "Ya" {
-                UserDefaults.standard.set(true, forKey: "DEAF")
-            } else {
-                UserDefaults.standard.set(false, forKey: "DEAF")
-            }
+    func deafStatusReload() {
+        if updatedDeafnessStatus != nil {
+            deafnessStatusInput.text = updatedDeafnessStatus
         }
-        
-        InputDeafnessStatus.menu = UIMenu(children: [
-            UIAction(title: "Ya", state: .on, handler: optionClosure),
-            UIAction(title: "Tidak", handler: optionClosure)
-        ])
-        
-        InputDeafnessStatus.showsMenuAsPrimaryAction = true
-        InputDeafnessStatus.changesSelectionAsPrimaryAction = true
     }
     
     @IBAction func saveButton() {
-        InputName.resignFirstResponder()
+        nameInput.resignFirstResponder()
         
-        if InputName.text?.isEmpty == false {
-            UserDefaults.standard.set(InputName.text, forKey: "NAME")
+        if nameInput.text?.isEmpty == false {
+            UserDefaults.standard.set(nameInput.text, forKey: "NAME")
         }
         
         self.navigationController!.popToRootViewController(animated: true)

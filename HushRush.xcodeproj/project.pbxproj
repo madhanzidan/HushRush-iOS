@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28B93B238A75B46FDCEAD586 /* Pods_HushRush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CB180BE3E9B310B5DEBCE /* Pods_HushRush.framework */; };
 		4ABFD75196FAA2C34B97BA46 /* Pods_EmergencyButtonWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */; };
+		4E257AE628736E7000191B44 /* BirthdateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E257AE528736E7000191B44 /* BirthdateModalViewController.swift */; };
+		4E257AE828739ED600191B44 /* DeafPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E257AE728739ED600191B44 /* DeafPickViewController.swift */; };
 		4E897D572858534600B64A35 /* EmergencySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D562858534600B64A35 /* EmergencySingleton.swift */; };
 		4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */; };
 		936E7347286B386F00C3CD20 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E7346286B386F00C3CD20 /* NavigationManager.swift */; };
@@ -93,6 +95,8 @@
 		314219D0031398CB3C7CAA62 /* Pods-HushRush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HushRush.debug.xcconfig"; path = "Target Support Files/Pods-HushRush/Pods-HushRush.debug.xcconfig"; sourceTree = "<group>"; };
 		3B9AB6CC41B15F7D9024632E /* Pods_EmergencyButtonWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyButtonWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD261D102D1EF253A0B5577 /* Pods-EmergencyButtonWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		4E257AE528736E7000191B44 /* BirthdateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateModalViewController.swift; sourceTree = "<group>"; };
+		4E257AE728739ED600191B44 /* DeafPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeafPickViewController.swift; sourceTree = "<group>"; };
 		4E897D562858534600B64A35 /* EmergencySingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencySingleton.swift; path = Model/EmergencySingleton.swift; sourceTree = "<group>"; };
 		4E897D5C285858AF00B64A35 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		6CA49BF76887807641C4271A /* Pods-EmergencyButtonWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyButtonWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-EmergencyButtonWidgetExtension/Pods-EmergencyButtonWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,7 +297,9 @@
 				A82F0ACE286B57CA00764CC0 /* ChangeProfileViewController.swift */,
 				A82F0ACF286B57CA00764CC0 /* ContactImportViewController.swift */,
 				A8982B80286E92D1008AD9D9 /* Profile.storyboard */,
+				4E257AE728739ED600191B44 /* DeafPickViewController.swift */,
 				A8982B7F286E92D1008AD9D9 /* ProfileViewController.swift */,
+				4E257AE528736E7000191B44 /* BirthdateModalViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 				A82FB8212855E2230044A5D6 /* AlertViewController.swift in Sources */,
 				A8E4B863286AD4600055AF6B /* ShadowViewButton.swift in Sources */,
 				A82FB86B28563E890044A5D6 /* DismissViewController.swift in Sources */,
+				4E257AE628736E7000191B44 /* BirthdateModalViewController.swift in Sources */,
 				A82F0AD3286B57CA00764CC0 /* ContactImportViewController.swift in Sources */,
 				A82F0AD2286B57CA00764CC0 /* ChangeProfileViewController.swift in Sources */,
 				A8D605D42865ADE10070D4EF /* OnboardingCollectionViewCell.swift in Sources */,
@@ -569,6 +576,7 @@
 				A82B3AEB2861B21900B1B063 /* TutorialViewController.swift in Sources */,
 				A8D605D62865AE130070D4EF /* OnboardingSlide.swift in Sources */,
 				4E897D5D285858AF00B64A35 /* CancelAlertViewController.swift in Sources */,
+				4E257AE828739ED600191B44 /* DeafPickViewController.swift in Sources */,
 				A8985517286C597200921909 /* ProfileUserDefaults.swift in Sources */,
 				A8D605D22865ADE10070D4EF /* SetUpPermissionViewController.swift in Sources */,
 				A8982B81286E92D1008AD9D9 /* ProfileViewController.swift in Sources */,

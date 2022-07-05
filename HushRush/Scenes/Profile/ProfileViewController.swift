@@ -38,10 +38,10 @@ class ProfileViewController: UIViewController {
         ProfilePicture.layer.borderColor = UIColor.white.cgColor
         
         let name = UserDefaults.standard.string(forKey: "NAME")
-        let isDeaf = UserDefaults.standard.bool(forKey: "DEAF")
+        let isDeaf = UserDefaults.standard.string(forKey: "DEAF")
         
         UserName.text = name != nil ? name : "--"
-        IsDeaf.text = isDeaf == true ? "Tuli/Tunarungu" : "--"
+        IsDeaf.text = isDeaf != nil ? isDeaf : "--"
         
         //MARK: - Shadow for button and background
         ShadowViewButton.sharedInstance.setButtonShadow(button: profileButton)
