@@ -178,7 +178,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-nZ-OwJ" userLabel="Tuli">
-                                <rect key="frame" x="13" y="499" width="363" height="34"/>
+                                <rect key="frame" x="13" y="411" width="363" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -193,13 +193,6 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-U0-K4p" userLabel="Nama">
                                 <rect key="frame" x="15" y="323" width="363" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="textField"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6W6-rZ-4Yl" userLabel="TanggalLahir">
-                                <rect key="frame" x="13" y="411" width="363" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -221,15 +214,8 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanggal Lahir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac2-Vd-Rdf">
-                                <rect key="frame" x="15" y="382" width="114" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apakah Anda Tuli/Tunarungu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Zh-Sci">
-                                <rect key="frame" x="15" y="470" width="259" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apakah Anda Tuli atau Tunarungu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Zh-Sci">
+                                <rect key="frame" x="15" y="382" width="296" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -259,7 +245,6 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <color key="backgroundColor" name="White"/>
                     </view>
                     <connections>
-                        <outlet property="birthDateField" destination="6W6-rZ-4Yl" id="yqZ-dd-NU3"/>
                         <outlet property="deafPickerField" destination="AZZ-nZ-OwJ" id="vp5-bX-5Vy"/>
                         <outlet property="nameField" destination="AYg-U0-K4p" id="dCf-Mf-ROY"/>
                         <outlet property="saveButton" destination="L4X-Tg-u8u" id="Q56-OF-9Wt"/>
