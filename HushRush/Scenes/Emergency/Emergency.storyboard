@@ -22,9 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jef-FB-sF5">
-                                <rect key="frame" x="85" y="688" width="220" height="52"/>
+                                <rect key="frame" x="85" y="687.33333333333337" width="220" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="UTx-9v-lLH"/>
+                                    <constraint firstAttribute="height" constant="52" id="rkI-GQ-58Y"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Matikan Alarm" cornerStyle="capsule">
@@ -42,30 +42,35 @@
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmW-wq-mRk">
+                                <rect key="frame" x="90" y="202" width="211" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="NxX-fb-D3m"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm telah dinyalakan. Kontak darurat dan lingkungan sekitar anda telah diperingatkan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-Ff-0L0">
-                                <rect key="frame" x="54" y="589.66666666666663" width="282" height="68.333333333333371"/>
+                                <rect key="frame" x="55" y="601" width="280" height="68.333333333333371"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmW-wq-mRk">
-                                <rect key="frame" x="90" y="202" width="211" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Red"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8ew-Ff-0L0" secondAttribute="trailing" constant="54" id="2nf-qf-Krk"/>
-                            <constraint firstItem="8ew-Ff-0L0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="54" id="4Th-mI-fLd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lmW-wq-mRk" secondAttribute="trailing" constant="89" id="29u-Gi-x6e"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8ew-Ff-0L0" secondAttribute="trailing" constant="55" id="681-3g-ua7"/>
                             <constraint firstItem="uwb-uw-E1L" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="100" id="8MW-YM-ddT"/>
+                            <constraint firstItem="lmW-wq-mRk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="90" id="GOP-dR-CxN"/>
+                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="18" id="Hff-2S-Ief"/>
                             <constraint firstItem="uwb-uw-E1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="MfD-5e-5Cx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jef-FB-sF5" secondAttribute="trailing" constant="85" id="PNA-3O-pdB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jef-FB-sF5" secondAttribute="bottom" constant="70" id="Xt1-En-4FV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uwb-uw-E1L" secondAttribute="trailing" constant="30" id="eNO-lp-iK2"/>
-                            <constraint firstItem="Jef-FB-sF5" firstAttribute="top" secondItem="8ew-Ff-0L0" secondAttribute="bottom" constant="30" id="jx7-dL-kah"/>
-                            <constraint firstItem="Jef-FB-sF5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="rK4-rd-Avr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jef-FB-sF5" secondAttribute="trailing" constant="85" id="kSA-Xy-bvI"/>
+                            <constraint firstItem="Jef-FB-sF5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="m1j-p1-OL1"/>
+                            <constraint firstItem="8ew-Ff-0L0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="pnF-Y0-QhG"/>
+                            <constraint firstItem="8ew-Ff-0L0" firstAttribute="top" secondItem="lmW-wq-mRk" secondAttribute="bottom" constant="25" id="wiW-hF-7IY"/>
+                            <constraint firstItem="lmW-wq-mRk" firstAttribute="top" secondItem="uwb-uw-E1L" secondAttribute="bottom" constant="16" id="xJ7-5l-kAE"/>
                         </constraints>
                     </view>
                     <connections>
