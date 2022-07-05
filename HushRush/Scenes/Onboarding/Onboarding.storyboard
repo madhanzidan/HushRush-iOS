@@ -44,10 +44,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QS2-Xf-Ilf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="546"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QS2-Xf-Ilf">
+                                <rect key="frame" x="0.0" y="44" width="390" height="546"/>
                                 <color key="backgroundColor" name="White"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="546" id="V5e-TG-X0h"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1rs-FK-w2c">
                                     <size key="itemSize" width="414" height="548"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -62,26 +64,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="548"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selamat datang di HushRush" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-Y2-eos">
-                                                    <rect key="frame" x="18" y="350" width="362" height="92"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selamat datang di HushRush" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-Y2-eos">
+                                                    <rect key="frame" x="18" y="350" width="362" height="86"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                                     <color key="textColor" name="Red"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aplikasi pendamping pribadi anda ketika anda berada di kondisi darurat, dibuat khusus untuk penyandang tuli." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-4Q-8xF">
-                                                    <rect key="frame" x="17" y="450" width="359" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplikasi pendamping pribadi anda ketika anda berada di kondisi darurat, dibuat khusus untuk penyandang tuli." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-4Q-8xF">
+                                                    <rect key="frame" x="17" y="446" width="359" height="60.666666666666686"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-nO-Xru">
-                                                    <rect key="frame" x="12" y="22" width="368" height="320"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-nO-Xru">
+                                                    <rect key="frame" x="23" y="8" width="368" height="320"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="320" id="xm4-Mh-DT2"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="White"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tGG-Y2-eos" secondAttribute="trailing" constant="34" id="6UR-en-QOO"/>
+                                                <constraint firstItem="tGG-Y2-eos" firstAttribute="leading" secondItem="hYn-RP-dQn" secondAttribute="leading" constant="18" id="7Sb-0a-gyl"/>
+                                                <constraint firstItem="tGG-Y2-eos" firstAttribute="top" secondItem="S0q-nO-Xru" secondAttribute="bottom" constant="22" id="H8A-WJ-TJe"/>
+                                                <constraint firstAttribute="trailing" secondItem="S0q-nO-Xru" secondAttribute="trailing" constant="23" id="Hru-hA-jAy"/>
+                                                <constraint firstItem="S0q-nO-Xru" firstAttribute="top" secondItem="hYn-RP-dQn" secondAttribute="top" constant="8" id="IeO-NO-k6R"/>
+                                                <constraint firstAttribute="trailing" secondItem="U1g-4Q-8xF" secondAttribute="trailing" constant="38" id="Opv-tZ-ubg"/>
+                                                <constraint firstItem="S0q-nO-Xru" firstAttribute="leading" secondItem="hYn-RP-dQn" secondAttribute="leading" constant="23" id="TPW-cq-ans"/>
+                                                <constraint firstItem="U1g-4Q-8xF" firstAttribute="top" secondItem="tGG-Y2-eos" secondAttribute="bottom" constant="10" id="cDA-eq-KKl"/>
+                                                <constraint firstItem="U1g-4Q-8xF" firstAttribute="leading" secondItem="hYn-RP-dQn" secondAttribute="leading" constant="17" id="ec6-Ov-V07"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="White"/>
                                         <size key="customSize" width="414" height="548"/>
@@ -97,9 +110,11 @@
                                     <outlet property="delegate" destination="q0w-RG-hhq" id="Cpt-Qq-oFx"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-3b-QY8">
-                                <rect key="frame" x="77" y="654" width="236" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-3b-QY8">
+                                <rect key="frame" x="77" y="610" width="236" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="frv-AR-1Hv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Saya memiliki waktu" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -111,15 +126,16 @@
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xhS-Kw-4Mv"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-oU-BgU">
-                                <rect key="frame" x="137" y="598" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-oU-BgU">
+                                <rect key="frame" x="120" y="568" width="150" height="25"/>
                                 <color key="pageIndicatorTintColor" name="TextFieldColor"/>
                                 <color key="currentPageIndicatorTintColor" name="DarkBlue"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-3l-TKl">
-                                <rect key="frame" x="77" y="713" width="236" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-3l-TKl">
+                                <rect key="frame" x="77" y="676" width="236" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="3Lv-QZ-afU"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Saya dalam bahaya" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -134,6 +150,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bQG-5f-Ubn"/>
                         <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="bQG-5f-Ubn" firstAttribute="trailing" secondItem="EZr-oU-BgU" secondAttribute="trailing" constant="120" id="1SQ-i2-eOM"/>
+                            <constraint firstItem="bQG-5f-Ubn" firstAttribute="trailing" secondItem="AiT-3l-TKl" secondAttribute="trailing" constant="77" id="9y7-FH-qsh"/>
+                            <constraint firstItem="QS2-Xf-Ilf" firstAttribute="trailing" secondItem="bQG-5f-Ubn" secondAttribute="trailing" id="Cfy-aJ-58z"/>
+                            <constraint firstItem="QS2-Xf-Ilf" firstAttribute="top" secondItem="UIN-fY-guo" secondAttribute="top" constant="44" id="Crc-3Z-5Jp"/>
+                            <constraint firstItem="k9j-3b-QY8" firstAttribute="top" secondItem="EZr-oU-BgU" secondAttribute="bottom" constant="17" id="Fhe-GW-VoQ"/>
+                            <constraint firstItem="EZr-oU-BgU" firstAttribute="top" secondItem="QS2-Xf-Ilf" secondAttribute="bottom" constant="-22" id="VID-Ts-5SK"/>
+                            <constraint firstItem="EZr-oU-BgU" firstAttribute="leading" secondItem="bQG-5f-Ubn" secondAttribute="leading" constant="120" id="Xae-La-7Wh"/>
+                            <constraint firstItem="k9j-3b-QY8" firstAttribute="leading" secondItem="bQG-5f-Ubn" secondAttribute="leading" constant="77" id="bJ3-FS-g4g"/>
+                            <constraint firstItem="AiT-3l-TKl" firstAttribute="leading" secondItem="bQG-5f-Ubn" secondAttribute="leading" constant="77" id="cHd-kx-VZk"/>
+                            <constraint firstItem="QS2-Xf-Ilf" firstAttribute="leading" secondItem="bQG-5f-Ubn" secondAttribute="leading" id="hQ0-BR-hds"/>
+                            <constraint firstItem="AiT-3l-TKl" firstAttribute="top" secondItem="k9j-3b-QY8" secondAttribute="bottom" constant="14" id="hvv-dX-GN1"/>
+                            <constraint firstItem="bQG-5f-Ubn" firstAttribute="trailing" secondItem="k9j-3b-QY8" secondAttribute="trailing" constant="77" id="lRv-GT-gUn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="QS2-Xf-Ilf" id="heq-hk-Fzt"/>
@@ -164,9 +194,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4X-Tg-u8u">
-                                <rect key="frame" x="131" y="648" width="128" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4X-Tg-u8u">
+                                <rect key="frame" x="131" y="609.33333333333337" width="128" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cb5-Hp-W1L"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Simpan" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -177,53 +209,46 @@
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7sc-ji-3aO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-nZ-OwJ" userLabel="Tuli">
-                                <rect key="frame" x="13" y="411" width="363" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-nZ-OwJ" userLabel="Tuli">
+                                <rect key="frame" x="15" y="410.33333333333331" width="360" height="34"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mulai dengan atur data profilmu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-WZ-Zeh" userLabel="Header">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mulai dengan atur data profilmu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-WZ-Zeh" userLabel="Header">
                                 <rect key="frame" x="16" y="104" width="324" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="Red"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-U0-K4p" userLabel="Nama">
-                                <rect key="frame" x="15" y="323" width="363" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-U0-K4p" userLabel="Nama">
+                                <rect key="frame" x="15" y="322.33333333333331" width="360" height="34"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-7Y-Gi7" userLabel="Body">
-                                <rect key="frame" x="16" y="198" width="359" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-7Y-Gi7" userLabel="Body">
+                                <rect key="frame" x="16" y="205" width="359" height="68.333333333333314"/>
                                 <string key="text">Informasi ini akan membantu orang
 lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Lengkap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg8-Uq-GAu">
-                                <rect key="frame" x="15" y="294" width="131" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Lengkap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg8-Uq-GAu">
+                                <rect key="frame" x="15" y="293.33333333333331" width="131" height="23"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apakah Anda Tuli atau Tunarungu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Zh-Sci">
-                                <rect key="frame" x="15" y="382" width="296" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apakah Anda Tuli atau Tunarungu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Zh-Sci">
+                                <rect key="frame" x="15" y="381.33333333333331" width="296" height="23"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-5B-GBY">
-                                <rect key="frame" x="139" y="717" width="113" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-5B-GBY">
+                                <rect key="frame" x="120" y="676.33333333333337" width="150" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -243,6 +268,30 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="AZZ-nZ-OwJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="BvT-r5-93B"/>
+                            <constraint firstItem="zcK-Zh-Sci" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="CF5-rm-fU6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L4X-Tg-u8u" secondAttribute="trailing" constant="131" id="EYB-Vv-c1Q"/>
+                            <constraint firstItem="dnU-WZ-Zeh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="FeA-18-FQ9"/>
+                            <constraint firstItem="zcK-Zh-Sci" firstAttribute="top" secondItem="AYg-U0-K4p" secondAttribute="bottom" constant="25" id="Htc-f2-yBn"/>
+                            <constraint firstItem="Zg8-Uq-GAu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="K6A-gz-DZq"/>
+                            <constraint firstItem="XAB-7Y-Gi7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Lx9-p3-wFV"/>
+                            <constraint firstItem="L4X-Tg-u8u" firstAttribute="top" secondItem="AZZ-nZ-OwJ" secondAttribute="bottom" constant="165" id="MfH-gk-5JA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q2G-5B-GBY" secondAttribute="trailing" constant="120" id="Q5j-kp-x6P"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AZZ-nZ-OwJ" secondAttribute="trailing" constant="15" id="RiK-E6-ZUR"/>
+                            <constraint firstItem="AYg-U0-K4p" firstAttribute="top" secondItem="Zg8-Uq-GAu" secondAttribute="bottom" constant="6" id="Y5Q-R0-clB"/>
+                            <constraint firstItem="dnU-WZ-Zeh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="104" id="Zcp-K1-sj9"/>
+                            <constraint firstItem="AZZ-nZ-OwJ" firstAttribute="top" secondItem="zcK-Zh-Sci" secondAttribute="bottom" constant="6" id="g6R-5z-kDb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XAB-7Y-Gi7" secondAttribute="trailing" constant="15" id="hlM-Cb-MpA"/>
+                            <constraint firstItem="q2G-5B-GBY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="120" id="hxC-Jb-rdO"/>
+                            <constraint firstItem="XAB-7Y-Gi7" firstAttribute="top" secondItem="dnU-WZ-Zeh" secondAttribute="bottom" constant="15" id="mWM-0Q-veR"/>
+                            <constraint firstItem="q2G-5B-GBY" firstAttribute="top" secondItem="L4X-Tg-u8u" secondAttribute="bottom" constant="15" id="pZd-mn-emN"/>
+                            <constraint firstItem="L4X-Tg-u8u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="131" id="tk8-f4-aDt"/>
+                            <constraint firstItem="Zg8-Uq-GAu" firstAttribute="top" secondItem="XAB-7Y-Gi7" secondAttribute="bottom" constant="20" id="tlg-EH-Cds"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dnU-WZ-Zeh" secondAttribute="trailing" constant="50" id="vub-4y-RMk"/>
+                            <constraint firstItem="AYg-U0-K4p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="ybL-hY-fQc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AYg-U0-K4p" secondAttribute="trailing" constant="15" id="yzQ-Qm-kTe"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="deafPickerField" destination="AZZ-nZ-OwJ" id="vp5-bX-5Vy"/>
@@ -263,23 +312,20 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tambahkan kontak darurat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66X-Jm-1vn" userLabel="Header">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tambahkan kontak darurat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66X-Jm-1vn" userLabel="Header">
                                 <rect key="frame" x="15" y="104" width="359" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="Red"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nomor ini akan secara otomatis terhubungi ketika sistem keamanan diaktifkan. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-wb-r1W">
-                                <rect key="frame" x="15" y="198" width="358" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nomor ini akan secara otomatis terhubungi ketika sistem keamanan diaktifkan. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-wb-r1W">
+                                <rect key="frame" x="15" y="205" width="358" height="68.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-ri-liI" userLabel="EmergencyContacts">
-                                <rect key="frame" x="16" y="344" width="358" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-ri-liI" userLabel="EmergencyContacts">
+                                <rect key="frame" x="15" y="322.33333333333331" width="360" height="34"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -287,30 +333,29 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                     <action selector="pickMe:" destination="lLk-bg-3gG" eventType="touchDown" id="E3e-mk-C23"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Kontak Darurat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agj-ad-7ya">
-                                <rect key="frame" x="15" y="315" width="212" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Kontak Darurat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agj-ad-7ya">
+                                <rect key="frame" x="15" y="293.33333333333331" width="185.33333333333334" height="23"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nomor Telepon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-wF-sTA">
-                                <rect key="frame" x="15" y="405" width="152" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nomor Telepon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-wF-sTA">
+                                <rect key="frame" x="15" y="382.33333333333331" width="133" height="23"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-7F-V23" userLabel="PhoneNumber">
-                                <rect key="frame" x="16" y="434" width="358" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-7F-V23" userLabel="PhoneNumber">
+                                <rect key="frame" x="15" y="411.33333333333331" width="360" height="34"/>
                                 <color key="backgroundColor" name="textField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-lg-Vn0">
-                                <rect key="frame" x="131" y="648" width="128" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-lg-Vn0">
+                                <rect key="frame" x="131" y="610.33333333333337" width="128" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="nEo-US-X04"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Simpan" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -322,9 +367,8 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                     <action selector="didTapSave:" destination="lLk-bg-3gG" eventType="touchUpInside" id="ob8-Ta-3j8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-Ot-Fud">
-                                <rect key="frame" x="139" y="717" width="113" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J20-Ot-Fud">
+                                <rect key="frame" x="120" y="677.33333333333337" width="150" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -343,6 +387,30 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTo-83-vyo"/>
                         <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="agj-ad-7ya" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="3ud-sZ-UjZ"/>
+                            <constraint firstItem="Edq-wF-sTA" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="4sM-AS-2rS"/>
+                            <constraint firstItem="Lo3-ri-liI" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="6in-O7-e2N"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="J6o-lg-Vn0" secondAttribute="trailing" constant="131" id="CEI-QZ-mdh"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="Lo3-ri-liI" secondAttribute="trailing" constant="15" id="ETm-2L-2mE"/>
+                            <constraint firstItem="J20-Ot-Fud" firstAttribute="top" secondItem="J6o-lg-Vn0" secondAttribute="bottom" constant="15" id="GEN-01-A6v"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="Amd-7F-V23" secondAttribute="trailing" constant="15" id="HbX-5a-5g4"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="J20-Ot-Fud" secondAttribute="trailing" constant="120" id="MPr-rY-Pk7"/>
+                            <constraint firstItem="trl-wb-r1W" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="Qe6-oI-rF3"/>
+                            <constraint firstItem="Amd-7F-V23" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="QuB-oH-Q0i"/>
+                            <constraint firstItem="J20-Ot-Fud" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="120" id="V5T-B8-w96"/>
+                            <constraint firstItem="66X-Jm-1vn" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="15" id="WYI-9n-ocB"/>
+                            <constraint firstItem="agj-ad-7ya" firstAttribute="top" secondItem="trl-wb-r1W" secondAttribute="bottom" constant="20" id="bsu-Vw-JlZ"/>
+                            <constraint firstItem="66X-Jm-1vn" firstAttribute="top" secondItem="gxO-by-hz3" secondAttribute="top" constant="104" id="dUJ-cL-9PI"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="trl-wb-r1W" secondAttribute="trailing" constant="17" id="eIp-cB-EIr"/>
+                            <constraint firstItem="bTo-83-vyo" firstAttribute="trailing" secondItem="66X-Jm-1vn" secondAttribute="trailing" constant="16" id="exT-M0-byL"/>
+                            <constraint firstItem="J6o-lg-Vn0" firstAttribute="top" secondItem="Amd-7F-V23" secondAttribute="bottom" constant="165" id="gW3-4J-hwo"/>
+                            <constraint firstItem="Amd-7F-V23" firstAttribute="top" secondItem="Edq-wF-sTA" secondAttribute="bottom" constant="6" id="mXE-4i-qwg"/>
+                            <constraint firstItem="Edq-wF-sTA" firstAttribute="top" secondItem="Lo3-ri-liI" secondAttribute="bottom" constant="26" id="muP-2R-2ID"/>
+                            <constraint firstItem="J6o-lg-Vn0" firstAttribute="leading" secondItem="bTo-83-vyo" secondAttribute="leading" constant="131" id="nr2-5w-zT4"/>
+                            <constraint firstItem="Lo3-ri-liI" firstAttribute="top" secondItem="agj-ad-7ya" secondAttribute="bottom" constant="6" id="rYr-1S-r32"/>
+                            <constraint firstItem="trl-wb-r1W" firstAttribute="top" secondItem="66X-Jm-1vn" secondAttribute="bottom" constant="15" id="xWd-6Y-vrC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="contactsNameField" destination="Lo3-ri-liI" id="hV2-h2-tov"/>
@@ -363,27 +431,17 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Berikan beberapa izin akses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pA-Fn-5mv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berikan beberapa izin akses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pA-Fn-5mv">
                                 <rect key="frame" x="16" y="104" width="358" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="Red"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIH-ep-UeT">
-                                <rect key="frame" x="170" y="446" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Permission" translatesAutoresizingMaskIntoConstraints="NO" id="LAL-UF-fF4">
-                                <rect key="frame" x="70" y="219" width="250" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5av-65-YA2">
-                                <rect key="frame" x="200" y="686" width="154" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5av-65-YA2">
+                                <rect key="frame" x="215" y="686" width="150" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="P5I-Cu-LLb"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Selanjutnya" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -395,9 +453,11 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SSs-rO-zCU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-bF-cSH">
-                                <rect key="frame" x="36" y="686" width="154" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-bF-cSH">
+                                <rect key="frame" x="25" y="686" width="150" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="vRH-ft-7HF"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Tidak Mengerti?" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="16"/>
@@ -409,13 +469,38 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                     <action selector="didTapSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qJg-xq-fcV"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="permissionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-EQ-uIM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="permissionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-EQ-uIM">
                                 <rect key="frame" x="127" y="525" width="122" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="M7R-PV-8Hp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Permission" translatesAutoresizingMaskIntoConstraints="NO" id="LAL-UF-fF4">
+                                <rect key="frame" x="70" y="224" width="250" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="6if-2w-OE1"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hSB-Qn-9qk"/>
                         <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="LAL-UF-fF4" firstAttribute="top" secondItem="9pA-Fn-5mv" secondAttribute="bottom" constant="34" id="By1-fR-6af"/>
+                            <constraint firstItem="hSB-Qn-9qk" firstAttribute="trailing" secondItem="aYW-EQ-uIM" secondAttribute="trailing" constant="141" id="C24-S7-Cc8"/>
+                            <constraint firstItem="9pA-Fn-5mv" firstAttribute="top" secondItem="4ri-kP-BJY" secondAttribute="top" constant="104" id="MQs-Mx-GVY"/>
+                            <constraint firstItem="vnQ-bF-cSH" firstAttribute="top" secondItem="aYW-EQ-uIM" secondAttribute="bottom" constant="77" id="NwK-qp-Nuq"/>
+                            <constraint firstItem="hSB-Qn-9qk" firstAttribute="trailing" secondItem="5av-65-YA2" secondAttribute="trailing" constant="25" id="ON4-Kc-ZrQ"/>
+                            <constraint firstItem="hSB-Qn-9qk" firstAttribute="trailing" secondItem="LAL-UF-fF4" secondAttribute="trailing" constant="70" id="Qpk-6Y-xZI"/>
+                            <constraint firstItem="vnQ-bF-cSH" firstAttribute="leading" secondItem="hSB-Qn-9qk" secondAttribute="leading" constant="25" id="WeY-YY-qik"/>
+                            <constraint firstItem="5av-65-YA2" firstAttribute="top" secondItem="aYW-EQ-uIM" secondAttribute="bottom" constant="77" id="YQf-6G-py8"/>
+                            <constraint firstItem="aYW-EQ-uIM" firstAttribute="top" secondItem="LAL-UF-fF4" secondAttribute="bottom" constant="50" id="agS-CD-SwR"/>
+                            <constraint firstItem="hSB-Qn-9qk" firstAttribute="trailing" secondItem="9pA-Fn-5mv" secondAttribute="trailing" constant="16" id="dYI-Pd-48Q"/>
+                            <constraint firstItem="5av-65-YA2" firstAttribute="leading" secondItem="hSB-Qn-9qk" secondAttribute="leading" constant="215" id="elD-jO-GjC"/>
+                            <constraint firstItem="aYW-EQ-uIM" firstAttribute="leading" secondItem="hSB-Qn-9qk" secondAttribute="leading" constant="127" id="jkj-wf-ae2"/>
+                            <constraint firstItem="LAL-UF-fF4" firstAttribute="leading" secondItem="hSB-Qn-9qk" secondAttribute="leading" constant="70" id="kW5-dE-aBp"/>
+                            <constraint firstItem="hSB-Qn-9qk" firstAttribute="trailing" secondItem="vnQ-bF-cSH" secondAttribute="trailing" constant="215" id="lDS-yr-SvG"/>
+                            <constraint firstItem="9pA-Fn-5mv" firstAttribute="leading" secondItem="hSB-Qn-9qk" secondAttribute="leading" constant="16" id="ucl-qB-GJz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="HjL-gd-V5M" kind="presentation" identifier="goDescription" id="m5D-gY-8Bl"/>
@@ -434,28 +519,30 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harap menyiapkan ruang penyimpanan pada iPhone anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZy-kz-oAk">
-                                <rect key="frame" x="16" y="114" width="358" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harap menyiapkan ruang penyimpanan pada iPhone anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZy-kz-oAk">
+                                <rect key="frame" x="16" y="75.999999999999986" width="358" height="128.66666666666663"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="34"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-zf-i3v">
-                                <rect key="frame" x="16" y="560" width="358" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-zf-i3v">
+                                <rect key="frame" x="16" y="526" width="358" height="113.66666666666663"/>
                                 <string key="text">HushRush akan menyimpan video di aplikasi Photos lokal Anda. Dengan meluangkan ruang penyimpanan, video bukti yang terekam dapat tersimpan dengan lebih aman.</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setupFinish" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-Ru-Lyv">
-                                <rect key="frame" x="102" y="277" width="187" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setupFinish" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-Ru-Lyv">
+                                <rect key="frame" x="102" y="237.66666666666663" width="187" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="Ufi-JG-Shc"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-AH-for">
-                                <rect key="frame" x="131" y="710" width="128" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-AH-for">
+                                <rect key="frame" x="131" y="670" width="128" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="snd-ZH-7EQ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Selesai" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -471,6 +558,20 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iYN-UP-uxX"/>
                         <color key="backgroundColor" name="Blue"/>
+                        <constraints>
+                            <constraint firstItem="QIK-Ru-Lyv" firstAttribute="top" secondItem="cZy-kz-oAk" secondAttribute="bottom" constant="33.000000000000028" id="0PD-bu-8IT"/>
+                            <constraint firstItem="DFc-zf-i3v" firstAttribute="leading" secondItem="iYN-UP-uxX" secondAttribute="leading" constant="16" id="7PR-Sh-2K4"/>
+                            <constraint firstItem="cZy-kz-oAk" firstAttribute="top" secondItem="iYN-UP-uxX" secondAttribute="top" constant="32" id="CA5-Sa-fUi"/>
+                            <constraint firstItem="cZy-kz-oAk" firstAttribute="leading" secondItem="iYN-UP-uxX" secondAttribute="leading" constant="16" id="Eet-XR-VfK"/>
+                            <constraint firstItem="DFc-zf-i3v" firstAttribute="top" secondItem="QIK-Ru-Lyv" secondAttribute="bottom" constant="39.333333333333371" id="FdT-Tb-cJd"/>
+                            <constraint firstItem="EeO-AH-for" firstAttribute="top" secondItem="DFc-zf-i3v" secondAttribute="bottom" constant="30.333333333333371" id="GXW-dn-Deb"/>
+                            <constraint firstItem="iYN-UP-uxX" firstAttribute="trailing" secondItem="DFc-zf-i3v" secondAttribute="trailing" constant="16" id="LDg-aR-Bkl"/>
+                            <constraint firstItem="iYN-UP-uxX" firstAttribute="trailing" secondItem="EeO-AH-for" secondAttribute="trailing" constant="131" id="bHH-9L-2Ed"/>
+                            <constraint firstItem="iYN-UP-uxX" firstAttribute="trailing" secondItem="cZy-kz-oAk" secondAttribute="trailing" constant="16" id="d1f-vd-XmQ"/>
+                            <constraint firstItem="QIK-Ru-Lyv" firstAttribute="leading" secondItem="iYN-UP-uxX" secondAttribute="leading" constant="102" id="dOv-Ap-zgt"/>
+                            <constraint firstItem="iYN-UP-uxX" firstAttribute="trailing" secondItem="QIK-Ru-Lyv" secondAttribute="trailing" constant="101" id="eq2-Pk-eeb"/>
+                            <constraint firstItem="EeO-AH-for" firstAttribute="leading" secondItem="iYN-UP-uxX" secondAttribute="leading" constant="131" id="iVf-lD-rpz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="EeO-AH-for" id="EEq-37-OkG"/>
@@ -508,49 +609,43 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keterangan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb2-Gf-wql">
-                                <rect key="frame" x="144" y="14" width="102" height="23"/>
+                                <rect key="frame" x="144" y="74" width="102" height="23"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjO-Vi-fb2">
-                                <rect key="frame" x="16" y="99" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjO-Vi-fb2">
+                                <rect key="frame" x="16" y="123" width="50" height="21"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kamera &amp; Mikrofon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-nX-dmm">
-                                <rect key="frame" x="16" y="228" width="149" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamera &amp; Mikrofon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-nX-dmm">
+                                <rect key="frame" x="16" y="247" width="149" height="21"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5A-Dv-XNL">
-                                <rect key="frame" x="16" y="366" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5A-Dv-XNL">
+                                <rect key="frame" x="16" y="393.66666666666669" width="37" height="21"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-1u-NdJ">
-                                <rect key="frame" x="16" y="128" width="355" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HushRush akan mengirimkan lokasi anda ke kontak darurat yang telah terdaftarkan ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-1u-NdJ">
+                                <rect key="frame" x="16" y="151.66666666666666" width="355" height="68.333333333333343"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush akan merekam video secara otomatis yang dapat anda gunakan sebagai barang bukti ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-oz-Jc9">
-                                <rect key="frame" x="16" y="257" width="355" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HushRush akan merekam video secara otomatis yang dapat anda gunakan sebagai barang bukti ketika sistem keamanan diaktifkan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-oz-Jc9">
+                                <rect key="frame" x="16" y="275.66666666666669" width="355" height="91"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32w-U6-QjN">
-                                <rect key="frame" x="16" y="394" width="348" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HushRush menyimpan video bukti yang sudah direkam di aplikasi Photos lokal anda." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32w-U6-QjN">
+                                <rect key="frame" x="16" y="422.33333333333331" width="348" height="68.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -559,16 +654,32 @@ lain mengidentifikasi dirimu dengan lebih cepat pada saat keadaan darurat.</stri
                         <viewLayoutGuide key="safeArea" id="57z-Aw-bzp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lb2-Gf-wql" firstAttribute="centerX" secondItem="x6m-Hp-GWM" secondAttribute="centerX" id="MKq-CL-JJp"/>
+                            <constraint firstItem="WjO-Vi-fb2" firstAttribute="top" secondItem="lb2-Gf-wql" secondAttribute="bottom" constant="26" id="10D-mo-3LB"/>
+                            <constraint firstItem="u5A-Dv-XNL" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="5ZI-uJ-m8L"/>
+                            <constraint firstItem="Nn7-1u-NdJ" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="6D0-W9-T6C"/>
+                            <constraint firstItem="lb2-Gf-wql" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="144" id="AsH-QR-1Pg"/>
+                            <constraint firstItem="WjO-Vi-fb2" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="BKP-IJ-a9v"/>
+                            <constraint firstItem="57z-Aw-bzp" firstAttribute="top" secondItem="lb2-Gf-wql" secondAttribute="top" constant="-30" id="CDj-kd-ZwP"/>
+                            <constraint firstItem="32w-U6-QjN" firstAttribute="firstBaseline" secondItem="u5A-Dv-XNL" secondAttribute="baseline" constant="30" id="EtY-sY-7s9"/>
+                            <constraint firstItem="1C2-nX-dmm" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="OrI-Bk-Ukx"/>
+                            <constraint firstItem="57z-Aw-bzp" firstAttribute="trailing" secondItem="32w-U6-QjN" secondAttribute="trailing" constant="26" id="PTP-S6-J3O"/>
+                            <constraint firstItem="EJw-oz-Jc9" firstAttribute="firstBaseline" secondItem="1C2-nX-dmm" secondAttribute="baseline" constant="30" id="RCY-Vb-snF"/>
                             <constraint firstItem="l40-RU-HID" firstAttribute="top" secondItem="x6m-Hp-GWM" secondAttribute="top" constant="10" id="Wlb-lH-Tj1"/>
-                            <constraint firstItem="lb2-Gf-wql" firstAttribute="top" secondItem="x6m-Hp-GWM" secondAttribute="top" constant="14" id="j2W-eU-wp9"/>
+                            <constraint firstItem="u5A-Dv-XNL" firstAttribute="top" secondItem="EJw-oz-Jc9" secondAttribute="bottom" constant="27" id="eXb-7e-KoT"/>
+                            <constraint firstItem="57z-Aw-bzp" firstAttribute="trailing" secondItem="Nn7-1u-NdJ" secondAttribute="trailing" constant="19" id="hwC-eZ-f9e"/>
+                            <constraint firstItem="1C2-nX-dmm" firstAttribute="top" secondItem="Nn7-1u-NdJ" secondAttribute="bottom" constant="27" id="iEZ-ga-zd3"/>
+                            <constraint firstItem="32w-U6-QjN" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="nus-e5-seh"/>
+                            <constraint firstItem="57z-Aw-bzp" firstAttribute="trailing" secondItem="EJw-oz-Jc9" secondAttribute="trailing" constant="19" id="rA7-ms-0Qp"/>
                             <constraint firstAttribute="trailing" secondItem="l40-RU-HID" secondAttribute="trailing" constant="5" id="sxb-qO-1XY"/>
+                            <constraint firstItem="EJw-oz-Jc9" firstAttribute="leading" secondItem="57z-Aw-bzp" secondAttribute="leading" constant="16" id="tJy-6E-Kvg"/>
+                            <constraint firstItem="Nn7-1u-NdJ" firstAttribute="firstBaseline" secondItem="WjO-Vi-fb2" secondAttribute="baseline" constant="30" id="w6Q-yo-pmG"/>
+                            <constraint firstItem="57z-Aw-bzp" firstAttribute="trailing" secondItem="lb2-Gf-wql" secondAttribute="trailing" constant="144" id="wkc-vk-gMc"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygA-JQ-RSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="826"/>
+            <point key="canvasLocation" x="1686.1538461538462" y="825.35545023696682"/>
         </scene>
     </scenes>
     <resources>

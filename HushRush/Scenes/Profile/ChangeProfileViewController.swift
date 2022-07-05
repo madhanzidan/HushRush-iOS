@@ -24,7 +24,7 @@ class ChangeProfileViewController: UIViewController {
         super.viewDidLoad()
 
         nameInputStyling()
-        birtdateReload()
+       
     }
     
     func nameInputStyling() {
@@ -35,20 +35,6 @@ class ChangeProfileViewController: UIViewController {
         nameInput.delegate = self
     }
     
-    @IBAction func birthdayButtonTapped(_ sender: Any) {
-        let controller = storyboard!.instantiateViewController(withIdentifier: "BirthdateModal") as! BirthdateModalViewController
-        controller.completionHandler = {
-            text in
-            self.birthdateInput.text = text
-        }
-        present(controller, animated: true)
-    }
-    
-    func birtdateReload() {
-        if updatedBirthdate != nil {
-            birthdateInput.text = updatedBirthdate
-        }
-    }
     
     @IBAction func deafTapped(_ sender: UIButton) {
         let controller = storyboard!.instantiateViewController(withIdentifier: "DeafPick") as! DeafPickViewController

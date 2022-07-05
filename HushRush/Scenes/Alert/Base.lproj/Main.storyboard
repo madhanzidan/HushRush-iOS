@@ -175,17 +175,29 @@ anda harus menggunakan nomor PIN anda untuk menonaktifkannya.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNj-tJ-F28">
-                                <rect key="frame" x="20" y="327" width="350" height="75.666666666666686"/>
+                                <rect key="frame" x="67" y="327" width="257.33333333333331" height="75.666666666666686"/>
                                 <string key="text">Mengaktifkan
 Sistem Peringatan</string>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-cS-NOP">
-                                <rect key="frame" x="97" y="718" width="196" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-BV-ggV">
+                                <rect key="frame" x="120" y="128" width="150" height="189"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="150"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlertInfo" translatesAutoresizingMaskIntoConstraints="NO" id="tav-Vi-0jx">
+                                <rect key="frame" x="55" y="457" width="281" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="2QZ-AH-xPG"/>
+                                    <constraint firstAttribute="height" constant="123" id="HMN-lR-SAC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-cS-NOP">
+                                <rect key="frame" x="130" y="654" width="130" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="rcv-eI-ACz"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Batalkan" cornerStyle="capsule">
@@ -197,35 +209,22 @@ Sistem Peringatan</string>
                                     <action selector="cancelAlert:" destination="8Sr-2A-hHK" eventType="touchUpInside" id="AYo-m6-yvs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-BV-ggV">
-                                <rect key="frame" x="20" y="128" width="350" height="189"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="150"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlertInfo" translatesAutoresizingMaskIntoConstraints="NO" id="tav-Vi-0jx">
-                                <rect key="frame" x="88" y="445" width="213" height="123"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="213" id="bPn-lg-B1V"/>
-                                    <constraint firstAttribute="height" constant="123" id="ipE-GG-v16"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iog-9C-XuO"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.29019607843137252" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="fNj-tJ-F28" secondAttribute="trailing" constant="20" id="1nk-Bm-gKB"/>
-                            <constraint firstItem="iog-9C-XuO" firstAttribute="bottom" secondItem="ntd-cS-NOP" secondAttribute="bottom" constant="40" id="3AS-bG-foA"/>
-                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="MSh-BV-ggV" secondAttribute="trailing" constant="20" id="DCk-Uf-K1s"/>
-                            <constraint firstItem="ntd-cS-NOP" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="97" id="GXs-gW-rtN"/>
-                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="ntd-cS-NOP" secondAttribute="trailing" constant="97" id="MQq-dc-ian"/>
-                            <constraint firstItem="MSh-BV-ggV" firstAttribute="top" secondItem="DWG-Db-3VV" secondAttribute="top" constant="128" id="Pfh-zm-Ed0"/>
-                            <constraint firstItem="fNj-tJ-F28" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="SI4-0z-11J"/>
-                            <constraint firstItem="MSh-BV-ggV" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="20" id="WVf-b6-BMF"/>
-                            <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="tav-Vi-0jx" secondAttribute="bottom" constant="150" id="mO8-Cn-MT6"/>
-                            <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="qfQ-3F-Oic"/>
-                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="tav-Vi-0jx" secondAttribute="trailing" constant="89" id="vCJ-Lx-lZ7"/>
-                            <constraint firstItem="tav-Vi-0jx" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="88" id="vri-7I-EgO"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="ntd-cS-NOP" secondAttribute="trailing" constant="130" id="2Z7-Ux-hvx"/>
+                            <constraint firstItem="tav-Vi-0jx" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="55" id="53T-gh-Jkq"/>
+                            <constraint firstItem="MSh-BV-ggV" firstAttribute="top" secondItem="DWG-Db-3VV" secondAttribute="top" constant="128" id="GoU-wC-5wr"/>
+                            <constraint firstItem="tav-Vi-0jx" firstAttribute="top" secondItem="fNj-tJ-F28" secondAttribute="bottom" constant="54.333333333333314" id="IiO-0r-axk"/>
+                            <constraint firstItem="fNj-tJ-F28" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="67" id="IwO-X7-gB5"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="tav-Vi-0jx" secondAttribute="trailing" constant="54" id="Z8A-g3-XZn"/>
+                            <constraint firstItem="fNj-tJ-F28" firstAttribute="top" secondItem="MSh-BV-ggV" secondAttribute="bottom" constant="10" id="dju-E7-csO"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="fNj-tJ-F28" secondAttribute="trailing" constant="65.666666666666686" id="dxi-65-9qU"/>
+                            <constraint firstItem="ntd-cS-NOP" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="130" id="e0x-18-Jxm"/>
+                            <constraint firstItem="iog-9C-XuO" firstAttribute="trailing" secondItem="MSh-BV-ggV" secondAttribute="trailing" constant="120" id="naP-3f-UwN"/>
+                            <constraint firstItem="ntd-cS-NOP" firstAttribute="top" secondItem="tav-Vi-0jx" secondAttribute="bottom" constant="74" id="sbE-eb-hY1"/>
+                            <constraint firstItem="MSh-BV-ggV" firstAttribute="leading" secondItem="iog-9C-XuO" secondAttribute="leading" constant="120" id="y3L-Iz-ugb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jWI-qD-emQ"/>
@@ -238,7 +237,7 @@ Sistem Peringatan</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4is-AM-Y6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="114"/>
+            <point key="canvasLocation" x="1050.7692307692307" y="113.74407582938387"/>
         </scene>
         <!--Emergency-->
         <scene sceneID="rDP-Ri-OCc">
