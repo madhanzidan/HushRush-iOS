@@ -8,6 +8,10 @@
 import UIKit
 
 class DeafPickViewController: UIViewController {
+    
+    
+    @IBOutlet weak var saveStatusButton: UIButton!
+    
     private var customTransitioningDelegate = TransitioningDelegate()
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -26,6 +30,10 @@ class DeafPickViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         deafPickerDelegates()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ShadowViewButton.sharedInstance.setButtonShadow(button: saveStatusButton)
     }
     
     func deafPickerDelegates() {

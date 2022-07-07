@@ -18,6 +18,7 @@ class ContactImportViewController: UIViewController, CNContactPickerDelegate {
     
     @IBOutlet weak var ContactName: UITextField!
     @IBOutlet weak var ContactPhoneNumber: UITextField!
+    @IBOutlet weak var saveContactButton: UIButton!
     
     var models = [Person]()
     
@@ -32,6 +33,8 @@ class ContactImportViewController: UIViewController, CNContactPickerDelegate {
         
         ContactName.text = name != nil ? name : " "
         ContactPhoneNumber.text = mobile != nil ? mobile : " "
+        
+        ShadowViewButton.sharedInstance.setButtonShadow(button: saveContactButton)
     }
         
     @IBAction @objc func addContact(_ sender: UIButton) {

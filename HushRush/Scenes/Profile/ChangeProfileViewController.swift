@@ -10,8 +10,10 @@ import UIKit
 class ChangeProfileViewController: UIViewController {
     
     @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var birthdateInput: UITextField!
     @IBOutlet weak var deafnessStatusInput: UITextField!
+    @IBOutlet weak var saveProfileButton: UIButton!
+    
+    
     
     var name: String? = UserDefaults.standard.string(forKey: "NAME")
     var birthday: String? = UserDefaults.standard.string(forKey: "DATE")
@@ -25,6 +27,10 @@ class ChangeProfileViewController: UIViewController {
 
         nameInputStyling()
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ShadowViewButton.sharedInstance.setButtonShadow(button: saveProfileButton)
     }
     
     func nameInputStyling() {

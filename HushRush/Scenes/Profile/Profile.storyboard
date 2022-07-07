@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="ContactName" destination="fNP-47-OKl" id="l04-2D-A52"/>
                         <outlet property="ContactPhoneNumber" destination="skx-SS-zxh" id="RgH-Ik-qTd"/>
+                        <outlet property="saveContactButton" destination="L48-IS-CX4" id="Msg-7Y-Qgu"/>
                         <segue destination="FdY-SC-a9o" kind="unwind" unwindAction="unwindToContactListWithSegue:" id="WlI-f2-iai"/>
                     </connections>
                 </viewController>
@@ -340,6 +341,7 @@
                     <connections>
                         <outlet property="deafnessStatusInput" destination="Yxa-ho-fQ0" id="0sL-gS-rsp"/>
                         <outlet property="nameInput" destination="Y1i-As-C5L" id="SsG-6E-s5L"/>
+                        <outlet property="saveProfileButton" destination="3Yn-kM-qib" id="dQt-j2-aKG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hd-9Z-mmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -405,6 +407,7 @@
                     <size key="freeformSize" width="390" height="300"/>
                     <connections>
                         <outlet property="deafPicker" destination="P7h-8A-sCD" id="85A-ul-CIt"/>
+                        <outlet property="saveStatusButton" destination="f6G-fD-slw" id="6OV-KH-bYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNz-rd-6In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
