@@ -14,7 +14,7 @@ struct Person {
     let phone: String
 }
 
-class ContactImportViewController: UIViewController, CNContactPickerDelegate {
+class ContactImportViewController: UIViewController {
     
     @IBOutlet weak var ContactName: UITextField!
     @IBOutlet weak var ContactPhoneNumber: UITextField!
@@ -43,6 +43,20 @@ class ContactImportViewController: UIViewController, CNContactPickerDelegate {
         self.present(contactController, animated: true)
     }
     
+    @IBAction func saveContact(_ sender: UIButton) {
+        UserDefaults.standard.set(ContactName.text!, forKey: "contactName")
+        UserDefaults.standard.set(ContactPhoneNumber.text!, forKey: "contactNumber")
+        
+        if ContactName.text == "" {
+            print("Contact Name Empty")
+        } else if ContactPhoneNumber.text == "" {
+            print("Contact Number Empty")
+        }
+        self.navigationController!.popToRootViewController(animated: true)
+    }
+}
+
+extension ContactImportViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         let name = contact.givenName + " " + contact.familyName
         var mobile = ""
@@ -58,17 +72,5 @@ class ContactImportViewController: UIViewController, CNContactPickerDelegate {
         print(models)
         ContactName.text = model.name
         ContactPhoneNumber.text = model.phone
-    }
-    
-    @IBAction func saveContact(_ sender: UIButton) {
-        UserDefaults.standard.set(ContactName.text!, forKey: "contactName")
-        UserDefaults.standard.set(ContactPhoneNumber.text!, forKey: "contactNumber")
-        
-        if ContactName.text == "" {
-            print("Contact Name Empty")
-        } else if ContactPhoneNumber.text == "" {
-            print("Contact Number Empty")
-        }
-        self.navigationController!.popToRootViewController(animated: true)
     }
 }
